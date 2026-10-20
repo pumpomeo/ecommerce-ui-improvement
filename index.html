@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bài tập cá nhân Chương 1 - Môn Phát triển ứng dụng WEB/TMĐT (UEH) - Cải tiến giao diện Thẻ & Danh mục sản phẩm Tiki.vn chuẩn Responsive bằng HTML5 và CSS3">
+  <title>Tiki.vn UI Improvement | Cải tiến Thẻ & Danh mục Dụng Cụ Nhà Bếp Responsive</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- 1. HEADER (Thanh điều hướng mô phỏng Tiki.vn) -->
+  <header class="site-header">
+    <div class="header-inner container">
+      <a href="#trang-chu" class="brand-logo" aria-label="Trang chủ Tiki">
+        <span class="logo-tiki">tiki</span>
+        <span class="logo-slogan">Tốt &amp; Nhanh</span>
+      </a>
+
+      <!-- Ô tìm kiếm thông minh kết hợp từ khóa gợi ý -->
+      <div class="header-search">
+        <form class="search-form" action="#" method="get" onsubmit="event.preventDefault();">
+          <input type="text" value="Dụng cụ nhà bếp Lock&amp;Lock" placeholder="Bạn tìm kiếm sản phẩm gì hôm nay..." aria-label="Tìm kiếm sản phẩm">
+          <button type="submit" aria-label="Tìm kiếm">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <span class="search-btn-text">Tìm kiếm</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Hành động nhanh: Vị trí giao hàng & Giỏ hàng -->
+      <div class="header-actions">
+        <div class="location-pill" title="Địa chỉ giao hàng mặc định">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          <span>Giao đến: <strong>Q.1, TP.HCM</strong></span>
+        </div>
+
+        <button class="action-btn cart-btn" aria-label="Xem giỏ hàng, đang có 2 món">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"></path>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <path d="M16 10a4 4 0 0 1-8 0"></path>
+          </svg>
+          <span class="cart-badge">2</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 2. BREADCRUMB (Đường dẫn danh mục phân cấp) -->
+  <nav class="breadcrumb-nav container" aria-label="Đường dẫn trang">
+    <ol class="breadcrumb-list">
+      <li><a href="#trang-chu">Trang chủ</a></li>
+      <li><a href="#nha-cua-doi-song">Nhà Cửa &amp; Đời Sống</a></li>
+      <li><a href="#dung-cu-nha-bep">Dụng Cụ Nhà Bếp</a></li>
+      <li aria-current="page">Dụng Cụ Chế Biến &amp; Xay Cắt</li>
+    </ol>
+  </nav>
+
+  <!-- NÚT BẬT BỘ LỌC CHO MOBILE (Chỉ xuất hiện trên màn hình < 992px) -->
+  <div class="container mobile-filter-bar">
+    <button type="button" class="btn-toggle-filter" id="btnToggleFilter" aria-expanded="false" aria-controls="catalogSidebar">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
+      <span>Danh Mục &amp; Bộ Lọc Tìm Kiếm</span>
+      <span class="active-dot"></span>
+    </button>
+  </div>
+
+  <!-- 3. KHU VỰC CHÍNH BỐ CỤC 2 CỘT CHUẨN RESPONSIVE -->
+  <main class="main-content container">
+    <div class="catalog-layout">
+
+      <!-- CỘT BÊN TRÁI: DANH MỤC SẢN PHẨM & BỘ LỌC TIKI -->
+      <aside class="catalog-sidebar" id="catalogSidebar" aria-label="Bộ lọc và Cây danh mục sản phẩm">
+        
+        <!-- Header cho Sidebar khi mở trên Mobile Drawer -->
+        <div class="sidebar-mobile-header">
+          <span class="mobile-drawer-title">Bộ Lọc &amp; Danh Mục</span>
+          <button type="button" class="btn-close-sidebar" id="btnCloseSidebar" aria-label="Đóng bảng lọc">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+          </button>
+        </div>
+
+        <!-- Khối 1: Cây danh mục sản phẩm phân tầng -->
+        <div class="sidebar-block">
+          <h2 class="sidebar-heading">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg>
+            Khám Phá Danh Mục
+          </h2>
+          <ul class="category-tree">
+            <li class="cat-item parent-cat">
+              <a href="#nha-cua-doi-song">Nhà Cửa &amp; Đời Sống</a>
+            </li>
+            <li class="cat-item current-branch">
+              <a href="#dung-cu-nha-bep" class="current-cat-link">
+                <strong>Dụng Cụ Nhà Bếp</strong>
+              </a>
+              <ul class="subcat-list">
+                <li class="subcat-item active">
+                  <a href="#xay-cat">
+                    <span class="cat-bullet">•</span> Dụng cụ xay cắt tỏi ớt
+                    <span class="cat-count">(24)</span>
+                  </a>
+                </li>
+                <li class="subcat-item">
+                  <a href="#hop-thuc-pham">
+                    <span class="cat-bullet">•</span> Hộp đựng thực phẩm
+                    <span class="cat-count">(58)</span>
+                  </a>
+                </li>
+                <li class="subcat-item">
+                  <a href="#noi-chao">
+                    <span class="cat-bullet">•</span> Nồi &amp; Chảo chống dính
+                    <span class="cat-count">(82)</span>
+                  </a>
+                </li>
+                <li class="subcat-item">
+                  <a href="#dao-keo">
+                    <span class="cat-bullet">•</span> Dao kéo làm bếp
+                    <span class="cat-count">(36)</span>
+                  </a>
+                </li>
+                <li class="subcat-item">
+                  <a href="#binh-giu-nhiet">
+                    <span class="cat-bullet">•</span> Bình giữ nhiệt &amp; Ấm đun
+                    <span class="cat-count">(65)</span>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Khối 2: Dịch vụ & Uy tín người bán -->
+        <div class="sidebar-block">
+          <h3 class="sidebar-subheading">Dịch Vụ &amp; Vận Chuyển</h3>
+          <div class="filter-group">
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              <span class="label-text">
+                <span class="badge-mini-now">TikiNOW</span> Giao siêu tốc 2H
+              </span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              <span class="label-text">
+                <span class="badge-mini-trading">Tiki Trading</span> Chính hãng
+              </span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              <span class="label-text">Freeship Extra</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Khối 3: Khoảng giá lọc nhanh -->
+        <div class="sidebar-block">
+          <h3 class="sidebar-subheading">Khoảng Giá</h3>
+          <div class="price-range-pills">
+            <button type="button" class="price-pill">Dưới 150.000₫</button>
+            <button type="button" class="price-pill active">150.000₫ - 500.000₫</button>
+            <button type="button" class="price-pill">500.000₫ - 1.500.000₫</button>
+            <button type="button" class="price-pill">Trên 1.500.000₫</button>
+          </div>
+        </div>
+
+        <!-- Khối 4: Thương hiệu nổi tiếng -->
+        <div class="sidebar-block">
+          <h3 class="sidebar-subheading">Thương Hiệu</h3>
+          <div class="filter-group">
+            <label class="filter-checkbox">
+              <input type="checkbox" checked>
+              <span class="checkmark"></span>
+              <span class="label-text">Lock&amp;Lock</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              <span class="label-text">Tefal</span>
+            </label>
+            <label class="filter-checkbox">
+              <input type="checkbox">
+              <span class="checkmark"></span>
+              <span class="label-text">Elmich</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Khối 5: Đánh giá sao -->
+        <div class="sidebar-block">
+          <h3 class="sidebar-subheading">Đánh Giá</h3>
+          <div class="rating-filter-list">
+            <label class="rating-radio">
+              <input type="radio" name="rating-filter" checked>
+              <span class="stars-gold">★★★★★</span>
+              <span class="rating-label">từ 5 sao</span>
+            </label>
+            <label class="rating-radio">
+              <input type="radio" name="rating-filter">
+              <span class="stars-gold">★★★★☆</span>
+              <span class="rating-label">từ 4 sao</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Nút áp dụng trên Mobile Drawer -->
+        <div class="sidebar-mobile-footer">
+          <button type="button" class="btn-apply-filters" id="btnApplyFilters">Áp Dụng Bộ Lọc</button>
+        </div>
+
+      </aside>
+
+      <!-- Lớp phủ mờ (Backdrop overlay) khi mở Drawer trên Mobile -->
+      <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+      <!-- CỘT BÊN PHẢI: KHU VỰC DANH SÁCH SẢN PHẨM CHÍNH -->
+      <section class="catalog-main-content" aria-labelledby="catalog-heading">
+        
+        <!-- Khối thu gọn nội dung dài (Giải quyết dòng 10 trong file phan-tich-ux-tiki.md) -->
+        <details class="category-collapsible-box">
+          <summary class="collapsible-summary">
+            <span class="summary-left">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+              <strong>Thông tin ngành hàng: Dụng Cụ Nhà Bếp Chính Hãng</strong>
+            </span>
+            <span class="summary-toggle-text">Xem giới thiệu / Thu gọn</span>
+          </summary>
+          <div class="collapsible-content">
+            <p>
+              Chào mừng bạn đến với chuyên mục <strong>Dụng Cụ Nhà Bếp</strong> được cung cấp chính hãng bởi <em>Tiki Trading</em> và các thương hiệu đối tác uy tín như <em>Lock&amp;Lock, Tefal, Elmich</em>. Toàn bộ mặt hàng tại đây đều được cam kết 100% hàng thật, hỗ trợ giao siêu tốc <strong>TikiNOW 2 Giờ</strong> và chính sách đổi trả miễn phí trong 30 ngày.
+            </p>
+          </div>
+        </details>
+
+        <!-- Tiêu đề danh mục & Thanh sắp xếp đưa lên đầu trang -->
+        <div class="catalog-header">
+          <div class="catalog-header-text">
+            <h1 id="catalog-heading" class="catalog-title">Dụng Cụ Nhà Bếp Nổi Bật</h1>
+            <p class="catalog-subtitle">Ưu đãi giảm sốc, bảo hành chính hãng và giao siêu tốc trong 2H</p>
+          </div>
+
+          <div class="filter-controls">
+            <span class="filter-label">Sắp xếp:</span>
+            <div class="filter-pills" role="tablist">
+              <button class="pill-btn active" role="tab" aria-selected="true">Phổ biến</button>
+              <button class="pill-btn" role="tab" aria-selected="false">Bán chạy</button>
+              <button class="pill-btn" role="tab" aria-selected="false">Giảm nhiều</button>
+              <button class="pill-btn" role="tab" aria-selected="false">Giao 2H</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- LƯỚI THẺ SẢN PHẨM CẢI TIẾN RESPONSIVE (PRODUCT GRID) -->
+        <div class="product-grid">
+
+          <!-- SẢN PHẨM 1: Sản phẩm mẫu khảo sát trực tiếp trong phan-tich-ux-tiki.md -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-tiki">Tiki Trading</span>
+              <span class="badge badge-discount">-43%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-1.jpg" alt="Dụng cụ xay tỏi ớt Lock&Lock CKS321GRN" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Tiki Trading</strong></span>
+              
+              <h3 class="product-title">
+                <a href="#product-1" title="Dụng cụ xay tỏi ớt Lock&Lock CKS321GRN kéo tay đơn giản">Dụng cụ xay tỏi ớt kéo tay Lock&amp;Lock CKS321GRN lưỡi dao inox sắc bén</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 4.9 trên 5 sao">★★★★★</div>
+                <span class="rating-score">4.9</span>
+                <span class="sold-count">• Đã bán 12.8k</span>
+              </div>
+
+              <!-- Phân cấp hiển thị giá tương phản cao -->
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>149.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">260.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 111.000₫</span>
+                </div>
+              </div>
+
+              <!-- Tiện ích vận chuyển -->
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Đổi trả 30 ngày</span>
+              </div>
+
+              <!-- Nút mua hàng chạm chuẩn ngón cái -->
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm sản phẩm Dụng cụ xay tỏi ớt vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 2: Nồi chiên không dầu điện tử -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-mall">Tefal Store</span>
+              <span class="badge badge-discount">-38%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-2.jpg" alt="Nồi chiên không dầu Tefal Turbo Cuisine 5L" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Tefal Official</strong></span>
+
+              <h3 class="product-title">
+                <a href="#product-2" title="Nồi chiên không dầu điện tử thông minh Tefal Turbo Cuisine 5L đa năng">Nồi chiên không dầu điện tử đa năng Tefal Turbo Cuisine 5.0L công suất cao</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 4.8 trên 5 sao">★★★★★</div>
+                <span class="rating-score">4.8</span>
+                <span class="sold-count">• Đã bán 3.4k</span>
+              </div>
+
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>1.790.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">2.890.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 1.100.000₫</span>
+                </div>
+              </div>
+
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Bảo hành 24T</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm sản phẩm Nồi chiên không dầu vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 3: Hộp thủy tinh chịu nhiệt chia ngăn -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-tiki">Tiki Trading</span>
+              <span class="badge badge-discount">-35%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-3.jpg" alt="Bộ 3 hộp bảo quản thực phẩm thủy tinh chịu nhiệt Lock&Lock" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Tiki Trading</strong></span>
+
+              <h3 class="product-title">
+                <a href="#product-3" title="Bộ 3 hộp thủy tinh chịu nhiệt Lock&Lock Glass chia ngăn dùng lò vi sóng">Bộ 3 hộp thủy tinh chịu nhiệt Lock&amp;Lock nắp khóa kín khí dùng lò vi sóng</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 5.0 trên 5 sao">★★★★★</div>
+                <span class="rating-score">5.0</span>
+                <span class="sold-count">• Đã bán 8.2k</span>
+              </div>
+
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>289.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">450.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 161.000₫</span>
+                </div>
+              </div>
+
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Chịu nhiệt 400°C</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm hộp thủy tinh vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 4: Chảo chống dính vân đá đáy từ -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-mall">Elmich Store</span>
+              <span class="badge badge-discount">-37%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-4.jpg" alt="Chảo chống dính đáy từ Elmich SmartCook 26cm" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Elmich VN</strong></span>
+
+              <h3 class="product-title">
+                <a href="#product-4" title="Chảo chống dính cao cấp đáy từ Elmich SmartCook 26cm">Chảo chống dính vân đá đáy từ Elmich SmartCook 26cm dùng mọi loại bếp</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 4.7 trên 5 sao">★★★★★</div>
+                <span class="rating-score">4.7</span>
+                <span class="sold-count">• Đã bán 5.1k</span>
+              </div>
+
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>245.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">390.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 145.000₫</span>
+                </div>
+              </div>
+
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Chống dính Whitford</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm chảo chống dính vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 5: Bình giữ nhiệt Inox Lock&Lock -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-tiki">Tiki Trading</span>
+              <span class="badge badge-discount">-40%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-5.jpg" alt="Bình giữ nhiệt inox 304 Lock&Lock Wave Feather 550ml" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Tiki Trading</strong></span>
+
+              <h3 class="product-title">
+                <a href="#product-5" title="Bình giữ nhiệt chân không inox 304 Lock&Lock nắp vặn 550ml">Bình giữ nhiệt inox 304 Lock&amp;Lock Feather Light 550ml giữ nóng lạnh 24 giờ</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 4.9 trên 5 sao">★★★★★</div>
+                <span class="rating-score">4.9</span>
+                <span class="sold-count">• Đã bán 6.7k</span>
+              </div>
+
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>229.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">380.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 151.000₫</span>
+                </div>
+              </div>
+
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Inox 304 chuẩn an toàn</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm bình giữ nhiệt vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+          <!-- SẢN PHẨM 6: Bộ dao làm bếp inox nguyên khối -->
+          <article class="product-card">
+            <div class="product-badge-group">
+              <span class="badge badge-hot">Bán chạy nhất</span>
+              <span class="badge badge-discount">-35%</span>
+            </div>
+
+            <figure class="product-media">
+              <img src="images/kitchen-6.jpg" alt="Bộ dao kéo làm bếp inox 6 món cao cấp" loading="lazy" width="400" height="400">
+              <button class="btn-wishlist" type="button" aria-label="Lưu vào danh sách yêu thích">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                </svg>
+              </button>
+            </figure>
+
+            <div class="product-body">
+              <span class="product-seller">Bởi: <strong>Tiki Trading</strong></span>
+
+              <h3 class="product-title">
+                <a href="#product-6" title="Bộ dao kéo làm bếp đa năng inox nguyên khối kèm giá để sang trọng">Bộ dao kéo làm bếp thép không gỉ cao cấp 6 món kèm thớt kháng khuẩn</a>
+              </h3>
+
+              <div class="product-rating">
+                <div class="stars" aria-label="Đánh giá 4.8 trên 5 sao">★★★★★</div>
+                <span class="rating-score">4.8</span>
+                <span class="sold-count">• Đã bán 2.3k</span>
+              </div>
+
+              <div class="product-pricing">
+                <div class="price-current">
+                  <span class="currency">₫</span>439.000
+                </div>
+                <div class="price-original-wrapper">
+                  <span class="price-original">680.000₫</span>
+                  <span class="savings-tag">Tiết kiệm 241.000₫</span>
+                </div>
+              </div>
+
+              <div class="product-benefits">
+                <span class="benefit-item benefit-delivery">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+                  Giao 2H
+                </span>
+                <span class="benefit-item">Thép SK5 sắc bén</span>
+              </div>
+
+              <div class="product-actions">
+                <button class="btn-add-cart" type="button" aria-label="Thêm bộ dao kéo vào giỏ">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                  </svg>
+                  Thêm vào giỏ
+                </button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- BẢNG ĐỐI CHIẾU THỰC NGHIỆM THEO FILE PHÂN TÍCH UX TIKI -->
+        <div class="summary-section">
+          <h3 class="summary-title">Bảng Đối Chiếu Cải Tiến Theo Báo Cáo Phân Tích UX Tiki</h3>
+          <div class="comparison-grid">
+            <div class="comp-card before">
+              <div class="comp-tag">Vấn Đề Ghi Nhận Tại Tiki.vn (Thực tế khảo sát)</div>
+              <ul>
+                <li>⚠️ <strong>Nội dung giới thiệu chiếm chỗ (Dòng 10):</strong> Trang danh mục <em>Dụng Cụ Nhà Bếp</em> dành phần lớn không gian đầu trang cho bài viết SEO dài, người mua phải cuộn nhiều mới tới danh sách sản phẩm.</li>
+                <li>⚠️ <strong>Thông tin quyết định mua phân tán (Dòng 11):</strong> Người mua khó quét nhanh thông tin người bán (Tiki Trading), giá cuối, thời gian giao hàng và chính sách bảo hành trước khi thêm giỏ.</li>
+                <li>⚠️ <strong>Nhãn quảng cáo dán đè ảnh:</strong> Các badge khuyến mãi dán chồng chéo lên ảnh làm che khuất các chi tiết lưỡi dao, cối xay của dụng cụ.</li>
+                <li>⚠️ <strong>Lệch chiều cao thẻ trên Mobile:</strong> Tên sản phẩm dài ngắn khác nhau làm vỡ bố cục lưới 2 cột trên điện thoại.</li>
+              </ul>
+            </div>
+            <div class="comp-card after">
+              <div class="comp-tag">Giải Pháp Cải Tiến Đã Áp Dụng Bằng HTML5/CSS3</div>
+              <ul>
+                <li>✅ <strong>Khối giới thiệu thu gọn:</strong> Đưa cây danh mục, công cụ lọc &amp; sắp xếp lên ngay đầu trang; nội dung giới thiệu được thu gọn trong thẻ <code>&lt;details&gt;</code> giúp khách hàng so sánh sản phẩm ngay lập tức.</li>
+                <li>✅ <strong>Gom cụm quyết định mua tại thẻ:</strong> Hiển thị rõ người bán <em>Tiki Trading</em>, giá bán đỏ tương phản cao, tag <em>Tiết kiệm Xđ</em>, huy hiệu <em>Giao 2H</em> và chính sách <em>Đổi trả 30 ngày</em>.</li>
+                <li>✅ <strong>Quy hoạch Badge thông minh:</strong> Tách nhãn lên góc trên với nền tương phản cao, ảnh sản phẩm tỉ lệ 1:1 thoáng đãng, hiệu ứng zoom mượt mà.</li>
+                <li>✅ <strong>Chuẩn hóa Responsive:</strong> Cố định 2 dòng tên với <code>-webkit-line-clamp: 2</code> và tối ưu nút "Thêm vào giỏ" đạt kích thước chạm ngón tay cái (&ge;42px).</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </section>
+    </div>
+  </main>
+
+  <!-- 4. CHÂN TRANG HỌC THUẬT -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <p class="footer-info">
+        <strong>Trường Đại học Kinh tế TP. Hồ Chí Minh (UEH)</strong> — Khoa Công nghệ Thông tin Kinh doanh
+      </p>
+      <p class="footer-sub">
+        Môn học: <strong>Phát triển ứng dụng WEB/TMĐT</strong> • Giảng viên: <strong>TS Nguyễn Mạnh Tuấn</strong>
+      </p>
+      <p class="footer-author">
+        Sinh viên thực hiện: <strong>Hoàng Anh Thi</strong> — GitHub: <code>pumpomeo</code> — Email: <code>thihoang.31241027492@st.ueh.edu.vn</code>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Thông báo Toast khi thao tác giỏ hàng -->
+  <div id="toast-notification" class="toast-notification" role="alert" aria-live="polite">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+    <span id="toast-text">Đã thêm sản phẩm vào giỏ hàng thành công!</span>
+  </div>
+
+  <!-- Script tương tác nội bộ và điều khiển Responsive Drawer -->
+  <script>
+    // 1. Điều khiển đóng/mở Bộ Lọc Drawer trên Mobile
+    const btnToggleFilter = document.getElementById('btnToggleFilter');
+    const btnCloseSidebar = document.getElementById('btnCloseSidebar');
+    const btnApplyFilters = document.getElementById('btnApplyFilters');
+    const catalogSidebar = document.getElementById('catalogSidebar');
+    const sidebarBackdrop = document.getElementById('sidebarBackdrop');
+
+    function openMobileSidebar() {
+      catalogSidebar.classList.add('mobile-open');
+      sidebarBackdrop.classList.add('show');
+      document.body.style.overflow = 'hidden';
+      btnToggleFilter.setAttribute('aria-expanded', 'true');
+    }
+
+    function closeMobileSidebar() {
+      catalogSidebar.classList.remove('mobile-open');
+      sidebarBackdrop.classList.remove('show');
+      document.body.style.overflow = '';
+      btnToggleFilter.setAttribute('aria-expanded', 'false');
+    }
+
+    if (btnToggleFilter) btnToggleFilter.addEventListener('click', openMobileSidebar);
+    if (btnCloseSidebar) btnCloseSidebar.addEventListener('click', closeMobileSidebar);
+    if (sidebarBackdrop) sidebarBackdrop.addEventListener('click', closeMobileSidebar);
+    if (btnApplyFilters) btnApplyFilters.addEventListener('click', closeMobileSidebar);
+
+    // 2. Xử lý tăng số lượng giỏ hàng và hiện toast khi bấm "Thêm vào giỏ"
+    const cartBadge = document.querySelector('.cart-badge');
+    const toast = document.getElementById('toast-notification');
+    let toastTimeout;
+
+    document.querySelectorAll('.btn-add-cart').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        let currentCount = parseInt(cartBadge.textContent) || 0;
+        cartBadge.textContent = currentCount + 1;
+        
+        cartBadge.classList.add('bounce');
+        setTimeout(() => cartBadge.classList.remove('bounce'), 300);
+
+        toast.classList.add('show');
+        clearTimeout(toastTimeout);
+        toastTimeout = setTimeout(() => {
+          toast.classList.remove('show');
+        }, 2200);
+      });
+    });
+
+    // 3. Bật/tắt nút yêu thích (Wishlist)
+    document.querySelectorAll('.btn-wishlist').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        btn.classList.toggle('active');
+      });
+    });
+
+    // 4. Chuyển đổi trạng thái nút sắp xếp
+    document.querySelectorAll('.filter-pills .pill-btn').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.filter-pills .pill-btn').forEach(p => p.classList.remove('active'));
+        pill.classList.add('active');
+      });
+    });
+
+    // 5. Chuyển đổi trạng thái mức giá lọc nhanh
+    document.querySelectorAll('.price-range-pills .price-pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.price-range-pills .price-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
