@@ -999,84 +999,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   11. SUMMARY SECTION (BẢNG ĐỐI CHIẾU)
-   -------------------------------------------------------------------------- */
-.summary-section {
-  background-color: #ffffff;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
-  padding: 28px 24px;
-  margin-top: 24px;
-  box-shadow: var(--shadow-card);
-}
-
-.summary-title {
-  font-size: 1.3rem;
-  font-weight: 800;
-  color: var(--text-main);
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-.comparison-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-}
-
-.comp-card {
-  padding: 20px;
-  border-radius: var(--radius-md);
-  border: 1px solid var(--border-color);
-}
-
-.comp-card.before {
-  background-color: #fffbfa;
-  border-color: #fee4e2;
-}
-
-.comp-card.after {
-  background-color: #f6fef9;
-  border-color: #d1fadf;
-}
-
-.comp-tag {
-  font-size: 0.84rem;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 12px;
-  padding-bottom: 8px;
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
-}
-
-.comp-card.before .comp-tag {
-  color: #b42318;
-}
-
-.comp-card.after .comp-tag {
-  color: #027a48;
-}
-
-.comp-card ul {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  font-size: 0.86rem;
-  line-height: 1.55;
-}
-
-.comp-card code {
-  background-color: rgba(0, 0, 0, 0.06);
-  padding: 2px 5px;
-  border-radius: 4px;
-  font-size: 0.85em;
-  font-family: monospace;
-}
-
-/* --------------------------------------------------------------------------
-   12. SITE FOOTER
+   11. SITE FOOTER
    -------------------------------------------------------------------------- */
 .site-footer {
   background-color: #1e293b;
@@ -1293,11 +1216,6 @@ button {
   .btn-add-cart {
     font-size: 0.82rem;
     min-height: 40px;
-  }
-
-  .comparison-grid {
-    grid-template-columns: 1fr;
-    gap: 14px;
   }
 
   .toast-notification {
