@@ -762,6 +762,7 @@ button {
   z-index: 2;
   width: 32px;
   height: 32px;
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-full);
   background-color: rgba(255, 255, 255, 0.9);
   color: var(--text-muted);
@@ -860,6 +861,7 @@ button {
 
 .sold-count {
   color: var(--text-muted);
+  margin-left: auto; /* đẩy "Đã bán" sang mép phải, sao và điểm giữ ở bên trái */
 }
 
 /* Hiển thị giá */
@@ -876,11 +878,6 @@ button {
   color: var(--price-red);
   line-height: 1.1;
   letter-spacing: -0.01em;
-}
-
-.price-current .currency {
-  font-size: 0.92rem;
-  margin-right: 1px;
 }
 
 .price-original-wrapper {
@@ -962,6 +959,27 @@ button {
 
 .btn-add-cart:active {
   transform: scale(0.98);
+}
+
+/* Trạng thái focus khi điều hướng bằng bàn phím (phím Tab) */
+.btn-add-cart:focus-visible,
+.btn-wishlist:focus-visible {
+  outline: 3px solid var(--tiki-blue-hover);   /* viền xanh đậm, cùng màu giao diện */
+  outline-offset: 2px;                         /* tách viền ra khỏi nút 2px */
+  box-shadow: 0 0 0 2px #ffffff;               /* lấp khoảng hở bằng màu trắng để viền nổi trên cả ảnh tối */
+}
+
+.btn-add-cart:focus-visible {
+  background-color: var(--tiki-blue);          /* giống trạng thái hover */
+  color: #ffffff;
+}
+
+.product-title a:focus-visible {
+  outline: none;                               /* outline bị overflow: hidden của .product-title cắt mất */
+  color: var(--tiki-blue-hover);               /* xanh đậm: đủ tương phản trên nền xanh nhạt */
+  text-decoration: underline;                  /* thay bằng gạch chân + nền xanh nhạt */
+  text-underline-offset: 3px;
+  background-color: var(--tiki-blue-light);
 }
 
 /* --------------------------------------------------------------------------
@@ -1158,7 +1176,8 @@ button {
 @media (max-width: 768px) {
   .header-inner {
     height: auto;
-    padding: 10px 0;
+    padding-top: 10px;     /* chỉ đặt lề trên/dưới, giữ lề trái/phải 20px của .container */
+    padding-bottom: 10px;
     gap: 12px;
   }
 
@@ -1284,8 +1303,13 @@ button {
   .btn-wishlist {
     top: 6px;
     right: 6px;
-    width: 28px;
-    height: 28px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .btn-wishlist svg {
+    width: 20px;
+    height: 20px;
   }
 
   .benefit-item:last-child {
