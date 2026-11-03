@@ -1,59 +1,94 @@
 # E-commerce UI Improvement
 
-Dự án bài tập cá nhân Chương 1 - Môn **Phát triển ứng dụng WEB/TMĐT**  
-* **Họ và tên:** Hoàng Anh Thi  
-* **MSSV:** 31241027492  
-* **Lớp:** EE0001  
-* **Trường:** Đại học Kinh tế TP. Hồ Chí Minh (UEH)  
-* **Giảng viên hướng dẫn:** TS Nguyễn Mạnh Tuấn  
-* **Đường dẫn repository GitHub:** https://github.com/pumpomeo/ecommerce-ui-improvement  
-* **Đường dẫn GitHub Pages:** https://pumpomeo.github.io/ecommerce-ui-improvement/  
+Bài tập cá nhân **Buổi 2: HTML & CSS** – môn **Phát triển ứng dụng WEB/TMĐT** (UEH). Bài tiếp tục phát triển website của Buổi 1, không tạo website mới.
 
----
+| | |
+|---|---|
+| **Họ và tên** | Hoàng Anh Thi |
+| **MSSV** | 31241027692 |
+| **Lớp** | EE0001 |
+| **Giảng viên** | TS Nguyễn Mạnh Tuấn |
+| **Repository** | https://github.com/pumpomeo/ecommerce-ui-improvement |
+| **Website (GitHub Pages)** | https://pumpomeo.github.io/ecommerce-ui-improvement/ |
 
-## 1. Giới thiệu
-Đây là trang giao diện minh họa được xây dựng bằng HTML5 và CSS3. Dựa trên kết quả khảo sát website Tiki, dự án tập trung cải tiến khu vực thẻ sản phẩm và bố cục danh mục ngành hàng Dụng Cụ Nhà Bếp. Giao diện mới giúp khách hàng dễ duyệt sản phẩm, nhận biết giá khuyến mãi, giá gốc, mức tiết kiệm cụ thể và tối ưu trải nghiệm thao tác trên cả máy tính lẫn điện thoại di động.
+## 1. Giới thiệu bài tập
+Trang danh mục **Dụng Cụ Nhà Bếp** mô phỏng giao diện Tiki, xây dựng bằng HTML5 và CSS3 ở Buổi 1. Buổi 2 thực hành HTML5 ngữ nghĩa, CSS selector, Box Model, Flexbox, CSS Grid, hover/focus và kiểm thử giao diện trên khu vực đã chọn. Không có backend, cơ sở dữ liệu hay thư viện CSS ngoài (Bootstrap/Tailwind).
 
-## 2. Website tham khảo
-- **Tên website:** Tiki
-- **URL:** https://tiki.vn/
-- **Khu vực đã khảo sát:** Trang chủ, Danh mục Dụng cụ nhà bếp (https://tiki.vn/nha-bep/c1951), Chi tiết sản phẩm mẫu (Dụng cụ xay tỏi ớt Lock&Lock CKS321GRN), Tìm kiếm (từ khóa "iphone", "nồi chiên") và Giỏ hàng.
+## 2. Website tham khảo và khu vực đã cải tiến
+- **Website tham khảo:** Tiki – https://tiki.vn/ (ngành hàng Dụng cụ nhà bếp). Đây là giao diện minh họa độc lập, không phải bản sao của Tiki và không kết nối hệ thống Tiki.
+- **Khu vực cải tiến:** danh sách sản phẩm và thẻ sản phẩm (`div.product-grid` cùng 6 `article.product-card`; `index.html` dòng 264–629, `css/style.css` dòng 687–983).
+- **Khu vực thực hành Flexbox:** hàng đánh giá của thẻ (`div.product-rating`).
 
-> Đây là giao diện minh họa độc lập cho bài tập, không phải bản sao hoàn chỉnh của Tiki và không kết nối với hệ thống Tiki.
+## 3. Kỹ thuật HTML5/CSS3 đã thực hành
+| Nội dung | Áp dụng trong bài |
+|---|---|
+| HTML5 ngữ nghĩa | `header`, `nav`, `main`, `section`, `article`, `figure`, `footer`; thứ bậc `h1 → h2`; `del` cho giá gốc; `img` có `alt`; `role="img"` cho cụm sao |
+| Tệp CSS riêng | `css/style.css` liên kết bằng `<link rel="stylesheet" href="css/style.css">` |
+| Selector | element, class, descendant (`.product-media img`, `.product-card:hover .product-media img`) |
+| Box Model | `margin`, `padding`, `border`, `border-radius`, `box-sizing: border-box` |
+| Flexbox | `display: flex`, `justify-content`, `align-items`, `gap`, `margin-left: auto` |
+| CSS Grid | `display: grid`, `grid-template-columns: repeat(3, 1fr)`, `gap`, `aspect-ratio`, `object-fit: cover`, `@media` |
+| Hover / focus | `:hover`, `transition`, `:focus-visible` (kèm kiểm tra độ tương phản WCAG AA) |
 
-## 3. Chức năng
-- Hiển thị cây danh mục sản phẩm (Category Tree) và bộ lọc thuộc tính đa tiêu chí (TikiNOW giao siêu tốc 2-3H, Tiki Trading chính hãng, khoảng giá, thương hiệu Lock&Lock, Tefal, Elmich và đánh giá sao).
-- Hiển thị danh sách gồm 6 sản phẩm mẫu thuộc ngành hàng Dụng cụ nhà bếp thực tế trên Tiki.
-- Mỗi thẻ sản phẩm hiển thị ảnh tỉ lệ 1:1, thông tin người bán (Tiki Trading / Official Store), tên sản phẩm, giá bán đỏ nổi bật, giá gốc gạch ngang, tag số tiền tiết kiệm, đánh giá sao, thời gian giao hàng và nút mua hàng.
-- Bố cục tự điều chỉnh theo màn hình: trên máy tính hiển thị lưới 3 cột cạnh sidebar; trên điện thoại hiển thị lưới 2 cột và sidebar chuyển thành bảng điều khiển trượt (Off-Canvas Drawer) tiện lợi.
-- Hiệu ứng tương tác: thẻ nâng nhẹ khi rê chuột, phóng nhẹ ảnh, nút thêm giỏ hàng có nảy số badge và hiển thị thông báo Toast.
-- Không có backend, cơ sở dữ liệu, đăng nhập hoặc thanh toán.
-
-## 4. Công nghệ
-- HTML5 (sử dụng cấu trúc thẻ ngữ nghĩa rõ ràng: `header`, `nav`, `aside`, `main`, `section`, `article`, `figure`, `details`, `summary`, `footer`)
-- CSS3 (tách thành file riêng `style.css`, sử dụng CSS Variables, CSS Grid, Flexbox và Media Queries)
-- JavaScript thuần (dung lượng nhẹ phục vụ đóng/mở drawer bộ lọc trên mobile và tăng số lượng giỏ hàng, không sử dụng thư viện ngoài)
-
-## 5. Cách chạy
-1. Tải và giải nén thư mục dự án (hoặc clone từ GitHub repository).
+## 4. Hướng dẫn chạy website
+1. Tải hoặc clone repository: `git clone https://github.com/pumpomeo/ecommerce-ui-improvement.git`
 2. Mở thư mục `ecommerce-ui-improvement`.
-3. Nhấp đúp vào `index.html` hoặc nhấp chuột phải và chọn mở bằng trình duyệt Google Chrome.
-4. Để kiểm tra trên điện thoại, mở Chrome DevTools bằng phím `F12`, bật chế độ thiết bị bằng `Ctrl + Shift + M`, sau đó chọn kích thước màn hình mong muốn.
+3. Mở `index.html` bằng Google Chrome (nhấp đúp hoặc chuột phải → Open with).
+4. Kiểm tra responsive: nhấn `F12` → `Ctrl + Shift + M` → chọn 1366 px, 768 px hoặc 390 px.
 
-Hoặc xem trực tiếp qua GitHub Pages: https://pumpomeo.github.io/ecommerce-ui-improvement/
+Hoặc xem trực tiếp: https://pumpomeo.github.io/ecommerce-ui-improvement/
 
-Không cần cài đặt máy chủ hay thư viện bên ngoài.
+## 5. Những thay đổi đã thực hiện trong Buổi 2
+| Bước | Thay đổi | Ảnh minh họa |
+|---|---|---|
+| 2 – HTML5 | `h3.product-title` → `h2.product-title`; giá gốc `span` → `del.price-original`; thêm `role="img"` cho `.stars`; thống nhất giá dạng `149.000₫` | ![Trước khi chỉnh sửa](images/screenshots/before-desktop.png) |
+| 4 – Box Model | Nút yêu thích: thêm `border`, tăng 28 px → 36 px trên màn hình ≤ 480 px | ![Nút yêu thích trước/sau](images/screenshots/buoc4-compare.png) |
+| 5 – Flexbox | Thử `justify-content`; chọn `margin-left: auto` cho `.sold-count` | ![justify-content](images/screenshots/buoc5-justify-content.png) |
+| 6 – Grid | Thử đổi số cột, bỏ `display: grid`, bỏ `object-fit: cover`; giữ `repeat(3, 1fr)` | ![Giao diện hoàn thiện 1366 px](images/screenshots/buoc6-final-1366.png) |
+| 7 – Hover/focus | Thêm `:focus-visible` cho nút và liên kết; đổi màu chữ focus `#0b74e5` → `#085ec0` (5.54:1) | ![So sánh focus](images/screenshots/buoc7-focus-compare.png) |
+| 8 – Kiểm thử | Sửa lề header ở 481–768 px (`padding: 10px 0` → `padding-bottom: 10px`); sửa dữ liệu SVG icon xe tải | ![Header 768 px](images/screenshots/buoc8-header-768.png) |
 
-## 6. Cải tiến đã thực hiện
-Dựa trên vấn đề xác định ở bước khảo sát, các cải tiến cụ thể đã được áp dụng vào giao diện:
-- **Khắc phục nội dung giới thiệu dài:** Đưa cây danh mục, bộ lọc và sản phẩm lên ngay đầu trang; phần giới thiệu dài được đưa vào khối thu gọn bằng thẻ `<details>` để khách hàng không phải cuộn nhiều.
-- **Quy hoạch lại vị trí nhãn (Badges):** Nhãn khuyến mãi và người bán được đặt gọn gàng ở góc trên để không che khuất hình ảnh sản phẩm 1:1.
-- **Phân cấp hiển thị giá tương phản cao:** Dùng màu đỏ cỡ lớn cho giá bán, giá gốc hiển thị nhỏ và gạch ngang, bổ sung tag "Tiết kiệm [số tiền]₫" giúp khách nhận biết ngay lợi ích tài chính.
-- **Khống chế độ dài tên sản phẩm:** Sử dụng thuộc tính CSS `-webkit-line-clamp: 2` để tên sản phẩm luôn hiển thị tối đa 2 dòng, giúp các thẻ sản phẩm luôn bằng phẳng, không bị so le chiều cao khi hiển thị 2 cột trên điện thoại.
-- **Tối ưu cột danh mục trên điện thoại:** Thay vì để sidebar chiếm diện tích đẩy sản phẩm xuống dưới, đã áp dụng giải pháp Off-Canvas Drawer với nút `[Danh Mục & Bộ Lọc Tìm Kiếm]` và lớp phủ mờ (`.sidebar-backdrop`), giúp điện thoại hiển thị ngay lưới 2 cột sản phẩm.
-- **Loại bỏ liên kết ngoài không cần thiết:** Ban đầu khi nhấp chuột vào xem chi tiết sản phẩm, trang web dẫn tới web của Tiki, phần này là không cần thiết và đã được loại bỏ hoàn toàn thành liên kết nội bộ để người dùng ở lại trang bài tập.
+Ảnh trước/sau của Bước 5: ![Trước](images/screenshots/buoc5-before-1366.png) ![Sau](images/screenshots/buoc5-after-1366.png)
 
-## 7. Hỗ trợ từ AI
-AI được sử dụng để hỗ trợ phân tích nghiệp vụ/UX website Tiki (Nhiệm vụ 2), đề xuất phương án thiết kế bố cục 2 cột, hỗ trợ tạo khung mã HTML5/CSS3 và giải thích cách bố trí đáp ứng nhiều kích thước màn hình. 
+Ảnh giao diện hoàn thiện:
 
-Sau đó, sinh viên đã tự mở trang trên trình duyệt, kiểm tra ở kích thước máy tính và điện thoại bằng Chrome DevTools, kiểm tra hình ảnh, nội dung, bố cục và tự tay điều chỉnh các điểm thực tế: loại bỏ liên kết trỏ ra ngoài Tiki, tối ưu cột danh mục trên điện thoại thành drawer và loại bỏ các suy đoán chưa kiểm chứng của AI về trang giỏ hàng. Chi tiết prompt và nhật ký tương tác được ghi đầy đủ tại file `AI_USAGE.md`.
+| 1366 px | 768 px | 390 px |
+|---|---|---|
+| ![1366](images/screenshots/buoc6-final-1366.png) | ![768](images/screenshots/buoc6-final-768.png) | ![390](images/screenshots/buoc6-final-390.png) |
+
+## 6. Báo cáo kiểm thử
+Kiểm tra bằng Chrome DevTools ở 1366 px, 768 px và 390 px.
+
+| Nội dung kiểm tra | Kết quả | Ghi chú |
+|---|---|---|
+| Trang HTML mở được | Đạt | Không có thẻ chưa đóng hoặc lồng sai |
+| CSS được áp dụng | Đạt | `css/style.css` tải thành công |
+| Hình ảnh hiển thị đúng | Chưa đạt | 6 ảnh tải được, đúng tỉ lệ; nhưng nội dung một số ảnh không khớp tên sản phẩm |
+| Liên kết hoạt động | Chưa đạt | Liên kết tên sản phẩm, breadcrumb, danh mục là liên kết tạm (`#...`) |
+| Bố cục không bị tràn nghiêm trọng | Đạt | Sau khi sửa lỗi header; lưới đúng số cột ở cả 3 kích thước |
+| Hover/focus hoạt động | Đạt | Kiểm tra bằng chuột và phím Tab |
+| Đã tự sửa ít nhất một vấn đề | Đạt | Lề header 481–768 px; icon xe tải |
+
+Vấn đề chưa sửa (ngoài phạm vi Buổi 2): ảnh không khớp tên sản phẩm; liên kết tạm; thư mục `images/` còn 6 tệp `product-1…6.jpg` không dùng.
+
+## 7. Công cụ AI đã sử dụng và cách kiểm tra kết quả
+- **Công cụ:** Claude (Anthropic) – https://claude.ai/
+- AI hỗ trợ phân tích mã Buổi 1, giải thích khái niệm, đề xuất đoạn CSS và tìm nguyên nhân lỗi. Em không chép nguyên văn: mọi đề xuất được thử trên trình duyệt và đối chiếu với mã nguồn. Ví dụ: đề xuất `minmax(0, 1fr)` được thử bằng chuỗi dài nhưng không cần thiết; màu focus `#0b74e5` bị đo chỉ đạt 4.02:1 nên đổi sang `#085ec0`.
+- Toàn bộ prompt, kết quả và phần tự điều chỉnh: xem [`AI_USAGE.md`](AI_USAGE.md).
+
+## 8. Cấu trúc thư mục
+```text
+ecommerce-ui-improvement/
+├── index.html
+├── css/style.css
+├── images/
+│   ├── kitchen-1.jpg … kitchen-6.jpg   (ảnh sản phẩm đang dùng)
+│   ├── product-1.jpg … product-6.jpg   (còn sót từ bản mẫu, không dùng)
+│   └── screenshots/                    (ảnh trước/sau, flexbox, grid, hover/focus, header)
+├── README.md
+└── AI_USAGE.md
+```
+
+## 9. Đường dẫn
+- Repository: https://github.com/pumpomeo/ecommerce-ui-improvement
+- Website: https://pumpomeo.github.io/ecommerce-ui-improvement/
