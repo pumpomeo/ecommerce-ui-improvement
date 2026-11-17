@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài thực hành JavaScript của Hoàng Anh Thi: Lab08, Lab09 và Lab10.">
+    <title>Lab10 — JavaScript 3: jQuery</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Đến nội dung chính</a>
+<main id="main" class="card-container lab-page">
+    <nav class="breadcrumb" aria-label="Điều hướng"><a href="../index.html">JavaScript Labs</a><span aria-hidden="true">/</span><span aria-current="page">Lab10</span></nav>
+    <header class="lab-header">
+        <p class="profile-tag">LAB 10 · 10 EXERCISE</p>
+        <h1>JavaScript 3: jQuery</h1>
+        <p class="profile-bio">Selectors, hiệu ứng, animation và yêu cầu GET.</p>
+        <a class="document-link" href="Lab10.pdf">Đọc đề bài Lab10 (PDF) ↗</a>
+    </header>
+    <p class="lab-note">Bài GET cần mở qua Live Server hoặc HTTP/HTTPS. Có thể chọn bản JSON đã lưu khi dịch vụ trực tuyến không truy cập được.</p>
+    <section aria-labelledby="exercises-title"><div class="section-heading"><h2 id="exercises-title">Chọn Exercise</h2></div><ol class="exercise-list">
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise01/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.1</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.1</span><span class="exercise-sub">Set Up jQuery</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise01/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.1">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise02/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.2</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.2</span><span class="exercise-sub">Basic Selectors</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise02/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.2">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise03/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.3</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.3</span><span class="exercise-sub">Advanced Selectors</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise03/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.3">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise04/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.4</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.4</span><span class="exercise-sub">jQuery Listeners</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise04/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.4">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise05/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.5</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.5</span><span class="exercise-sub">Inserting DOM Elements</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise05/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.5">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise06/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.6</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.6</span><span class="exercise-sub">Simple jQuery Animation</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise06/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.6">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise07/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.7</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.7</span><span class="exercise-sub">More jQuery Animation</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise07/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.7">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise08/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.8</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.8</span><span class="exercise-sub">Complex Animations</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise08/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.8">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise09/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.9</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.9</span><span class="exercise-sub">GET Requests</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise09/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.9">Ảnh minh chứng</a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise10/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">10.10</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 10.10</span><span class="exercise-sub">jqXHR Handling</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a><a class="evidence-link" href="Exercise10/screenshot/index.html" aria-label="Ảnh minh chứng Exercise 10.10">Ảnh minh chứng</a></li>
+    </ol></section>
+    <footer><a href="../index.html">← Về trang chủ JavaScript Labs</a><p>© 2026 Hoàng Anh Thi</p></footer>
+</main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1">      
+    <title>Exercise 10.10 — jQuery</title>    
+    <link rel="stylesheet" href="css/consume.css">
+        
+    <script src="js/jquery-3.1.1.min.js"></script>    
+    <script type="text/javascript" language="javascript" src="js/lab10-walkthrough10.js"></script>      
+    
+</head>
+<body >
+
+<p><label for="dataSource">Nguồn dữ liệu:</label>
+<select id="dataSource"><option value="live">Dịch vụ trực tuyến trong đề</option><option value="saved">Bản JSON đã lưu từ dịch vụ</option></select></p>
+<button id="consume">Consume</button>
+<p id="requestStatus" role="status" aria-live="polite">Chọn nguồn rồi nhấn Consume. GET cần mở qua HTTP/HTTPS (Live Server).</p> 
+<div id="results">
+    <ul></ul>
+</div>
+<div class="animLoading"><img src="images/ajax-loader.gif" /></div>  
+       
+</body>
+  
+    
+</html>
