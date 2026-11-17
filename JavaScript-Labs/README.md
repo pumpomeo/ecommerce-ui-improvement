@@ -8,7 +8,7 @@ Thư mục tổng hợp mã nguồn và ảnh minh chứng của ba bài Lab tro
 | --- | --- |
 | Họ và tên | Hoàng Anh Thi |
 | Mã số sinh viên | 312410274692 |
-| Lớp học phần | [Bổ sung lớp học phần] |
+| Lớp học phần | 26C1INF50902701 |
 | GitHub cá nhân | [pumpomeo](https://github.com/pumpomeo) |
 | GitHub Repository | [pumpomeo/ecommerce-ui-improvement](https://github.com/pumpomeo/ecommerce-ui-improvement) |
 | GitHub Pages | [JavaScript Labs](https://pumpomeo.github.io/ecommerce-ui-improvement/JavaScript-Labs/) |
@@ -81,7 +81,7 @@ Các địa chỉ triển khai theo repository `pumpomeo/ecommerce-ui-improvemen
 | Lab09 | [JavaScript-Labs/Lab09/](https://pumpomeo.github.io/ecommerce-ui-improvement/JavaScript-Labs/Lab09/) |
 | Lab10 | [JavaScript-Labs/Lab10/](https://pumpomeo.github.io/ecommerce-ui-improvement/JavaScript-Labs/Lab10/) |
 
-**Sau khi chuyển repository ngày 17/11/2026:** các đường dẫn trên đã được cập nhật theo repository đích. Cần đưa thư mục này lên GitHub và kiểm tra GitHub Pages trước khi nộp. Trang chủ cục bộ đã có thông tin cá nhân, giới thiệu nội dung và liên kết đến ba Lab; lớp học phần còn chờ bổ sung.
+**Sau khi chuyển repository ngày 17/11/2026:** các đường dẫn trên đã được cập nhật theo repository đích. Cần đưa thư mục này lên GitHub và kiểm tra GitHub Pages trước khi nộp. Trang chủ cục bộ đã có thông tin cá nhân, giới thiệu nội dung và liên kết đến ba Lab.
 
 ## 6. Hướng dẫn truy cập các bài thực hành
 
