@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Exercise 9.8 — DOM and Events</title>
+    <link rel="stylesheet" type="text/css" href="css/lab09.css" />
+    <link rel="stylesheet" type='text/css' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" />
+    
+   <script type="text/javascript" language="javascript" src="js/lab09-walkthrough08.js"></script>
+</head>
+<body class="form-body">
+
+
+<div class="form-box">
+  <h1>Registration</h1>
+
+  <form method="get" action="#" id="sampleForm">
+
+  <hr>
+  <label class="field-icon" for="name"><i class="fa fa-user fa-fw"></i></label>
+  <input type="text" name="name" id="name" aria-label="Name" placeholder="Name" />
+  <label class="field-icon" for="phone"><i class="fa fa-phone fa-fw"></i></label>
+  <input type="text" name="phone" id="phone" aria-label="Phone" placeholder="Phone" />
+  <label class="field-icon" for="email"><i class="fa fa-envelope fa-fw"></i></label>
+  <input type="text" name="email" id="email" aria-label="Email" placeholder="Email" />    
+  <label class="field-icon" for="pass"><i class="fa fa-key fa-fw"></i></label>
+  <input type="password" name="pass" id="pass" aria-label="Password" placeholder="Password" />
+
+   <button type="submit" ><i class="fa fa-reply fa-fw"></i> Register</button> 
+   
+  </form>
+</div>
+      
+<div id="errors" class="hidden" role="alert">
+</div>      
+       
+</body>
+</html>
