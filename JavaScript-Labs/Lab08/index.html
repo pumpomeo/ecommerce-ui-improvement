@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bài thực hành JavaScript của Hoàng Anh Thi: Lab08, Lab09 và Lab10.">
+    <title>Lab08 — JavaScript 1: Language Foundations</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Đến nội dung chính</a>
+<main id="main" class="card-container lab-page">
+    <nav class="breadcrumb" aria-label="Điều hướng"><a href="../index.html">JavaScript Labs</a><span aria-hidden="true">/</span><span aria-current="page">Lab08</span></nav>
+    <header class="lab-header">
+        <p class="profile-tag">LAB 08 · 11 EXERCISE</p>
+        <h1>JavaScript 1: Language Foundations</h1>
+        <p class="profile-bio">Biến, kiểu dữ liệu, mảng, hàm và đối tượng.</p>
+        <a class="document-link" href="Lab08.pdf">Đọc đề bài Lab08 (PDF) ↗</a>
+    </header>
+    <p class="lab-note">Bài 8.1 có ảnh ghi nhận lỗi truy cập trang thử nghiệm trong đề. Các bài 8.2–8.11 có kết quả thực hành riêng.</p>
+    <section aria-labelledby="exercises-title"><div class="section-heading"><h2 id="exercises-title">Chọn Exercise</h2></div><ol class="exercise-list">
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise01/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.1</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.1</span><span class="exercise-sub">Bật/tắt JavaScript</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise02/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.2</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.2</span><span class="exercise-sub">JavaScript nhúng trong HTML</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise03/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.3</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.3</span><span class="exercise-sub">Tệp JavaScript bên ngoài</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise04/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.4</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.4</span><span class="exercise-sub">Thẻ noscript</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise05/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.5</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.5</span><span class="exercise-sub">Console của trình duyệt</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise06/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.6</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.6</span><span class="exercise-sub">Các đối tượng có sẵn</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise07/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.7</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.7</span><span class="exercise-sub">Mảng</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise08/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.8</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.8</span><span class="exercise-sub">Hàm JavaScript</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise09/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.9</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.9</span><span class="exercise-sub">Hàm dưới dạng đối tượng</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise10/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.10</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.10</span><span class="exercise-sub">Tạo đối tượng</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+        <li class="exercise-row"><a class="btn-exercise" href="Exercise11/index.html">
+            <span class="exercise-icon-box exercise-number" aria-hidden="true">8.11</span>
+            <span class="exercise-text"><span class="exercise-title">Exercise 8.11</span><span class="exercise-sub">Mảng các đối tượng</span></span><svg class="exercise-arrow" viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="m9 5 7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a></li>
+    </ol></section>
+    <footer><a href="../index.html">← Về trang chủ JavaScript Labs</a><p>© 2026 Hoàng Anh Thi</p></footer>
+</main>
+</body>
+</html>

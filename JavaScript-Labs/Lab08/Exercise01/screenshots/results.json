@@ -1,0 +1,42 @@
+{
+  "browser": "Google Chrome",
+  "setting": "profile.default_content_setting_values.javascript",
+  "results": [
+    {
+      "url": "http://examples.funwebdev.com/JavaScriptTest.php",
+      "javaScriptEnabled": true,
+      "settingVerified": true,
+      "status": null,
+      "failure": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://examples.funwebdev.com/JavaScriptTest.php",
+      "body": "This site can’t be reached\n\nexamples.funwebdev.com’s server IP address could not be found.\n\nTry:\n\nChecking the connection\nChecking the proxy, firewall, and DNS configuration\nERR_NAME_NOT_RESOLVED\nReload\nDetails",
+      "screenshot": "http-js-enabled.png"
+    },
+    {
+      "url": "http://examples.funwebdev.com/JavaScriptTest.php",
+      "javaScriptEnabled": false,
+      "settingVerified": true,
+      "status": null,
+      "failure": "page.goto: net::ERR_NAME_NOT_RESOLVED at http://examples.funwebdev.com/JavaScriptTest.php",
+      "body": "This site can’t be reached\n\nexamples.funwebdev.com’s server IP address could not be found.\n\nTry:\n\nChecking the connection\nChecking the proxy, firewall, and DNS configuration\nERR_NAME_NOT_RESOLVED\nReload\nDetails",
+      "screenshot": "http-js-disabled.png"
+    },
+    {
+      "url": "https://examples.funwebdev.com/JavaScriptTest.php",
+      "javaScriptEnabled": false,
+      "settingVerified": true,
+      "status": null,
+      "failure": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://examples.funwebdev.com/JavaScriptTest.php",
+      "body": "This site can’t be reached\n\nexamples.funwebdev.com’s server IP address could not be found.\n\nTry:\n\nChecking the connection\nChecking the proxy, firewall, and DNS configuration\nERR_NAME_NOT_RESOLVED\nReload\nDetails",
+      "screenshot": "https-js-disabled.png"
+    },
+    {
+      "url": "https://examples.funwebdev.com/JavaScriptTest.php",
+      "javaScriptEnabled": true,
+      "settingVerified": true,
+      "status": null,
+      "failure": "page.goto: net::ERR_NAME_NOT_RESOLVED at https://examples.funwebdev.com/JavaScriptTest.php",
+      "body": "This site can’t be reached\n\nexamples.funwebdev.com’s server IP address could not be found.\n\nTry:\n\nChecking the connection\nChecking the proxy, firewall, and DNS configuration\nERR_NAME_NOT_RESOLVED\nReload\nDetails",
+      "screenshot": "https-js-enabled.png"
+    }
+  ]
+}

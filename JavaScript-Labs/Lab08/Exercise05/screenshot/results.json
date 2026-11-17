@@ -1,0 +1,65 @@
+{
+  "browser": "Google Chrome",
+  "screenshots": [
+    {
+      "image": "01-moved-js-network.png",
+      "description": "Bước 1–3: hello.js trong js/, tải thành công qua Network; trang giữ nguyên kết quả."
+    },
+    {
+      "image": "02-typo-console.png",
+      "description": "Bước 4–6: cố tình viết doccumment.write; Console báo ReferenceError và phần chữ từ JS biến mất."
+    },
+    {
+      "image": "03-fixed-console.png",
+      "description": "Bước 7: sửa lại document.write; trang hiển thị đúng và Console hết lỗi."
+    },
+    {
+      "image": "04-console-count.png",
+      "description": "Bước 8–9: nhập count → 2."
+    },
+    {
+      "image": "05-console-output.png",
+      "description": "Bước 10: nhập output → \"<br>Count = 2\"."
+    },
+    {
+      "image": "06-console-temp-assignment.png",
+      "description": "Bước 11: nhập var temp = count * 7; → undefined."
+    },
+    {
+      "image": "07-console-temp.png",
+      "description": "Bước 12: nhập temp → 14."
+    },
+    {
+      "image": "08-console-log.png",
+      "description": "Bước 13: comment alert và thêm console.log; trang không còn hiện hộp thoại."
+    },
+    {
+      "image": "09-console-log-warn-error.png",
+      "description": "Bước 14: Console hiện đủ log, warning và error do mã chủ động tạo theo đề; không có ngoại lệ JavaScript."
+    },
+    {
+      "image": "10-final-page.png",
+      "description": "Trang hoàn chỉnh sau khi làm hết bài 8.5, không mở DevTools."
+    }
+  ],
+  "finalCheck": {
+    "uncaughtErrors": [],
+    "dialogs": [],
+    "consoleMessages": [
+      {
+        "type": "log",
+        "text": "script within the <head> element"
+      },
+      {
+        "type": "warning",
+        "text": "oh no this is a warning"
+      },
+      {
+        "type": "error",
+        "text": "panic!! error!!"
+      }
+    ],
+    "count": 2,
+    "output": "<br>Count = 2"
+  }
+}
