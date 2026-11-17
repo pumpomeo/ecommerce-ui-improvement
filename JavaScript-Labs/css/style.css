@@ -1,0 +1,76 @@
+:root { color-scheme: light; --ink: #1e293b; --muted: #526174; --line: #e2e8f0; --blue: #2563eb; }
+* { box-sizing: border-box; }
+body { margin: 0; min-height: 100vh; padding: 40px 16px; display: grid; place-items: center; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; color: var(--ink); background: linear-gradient(135deg, #eef2f7 0%, #e0e7ff 100%); line-height: 1.6; }
+a { color: #1d4ed8; text-underline-offset: 3px; }
+a:focus-visible { outline: 3px solid #1d4ed8; outline-offset: 4px; }
+p, h1, h2, dd { margin: 0; }
+.skip-link { position: absolute; left: 16px; top: -100px; padding: 8px 16px; background: white; z-index: 1; }
+.skip-link:focus { top: 8px; }
+.card-container { width: 100%; max-width: 720px; padding: 40px 32px; border-radius: 24px; background: #fff; box-shadow: 0 12px 35px rgb(0 0 0 / 8%); }
+.profile { text-align: center; }
+.avatar { display: block; margin: 0 auto 16px; width: 135px; height: 135px; object-fit: cover; object-position: center 35%; border-radius: 50%; border: 4px solid white; box-shadow: 0 8px 24px rgb(0 0 0 / 14%); }
+.profile-name { font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 6px; }
+.profile-bio { font-size: 15px; color: var(--muted); }
+.profile-tag { display: inline-block; margin: 12px 0 20px; padding: 5px 12px; border-radius: 20px; background: #f1f5f9; color: #475569; font-size: 13px; font-weight: 600; }
+.student-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 0 0 24px; }
+.student-meta div { border: 1px solid var(--line); padding: 10px; border-radius: 10px; }
+.student-meta dt { font-size: 12px; color: var(--muted); }
+.student-meta dd { font-size: 14px; font-weight: 600; }
+.social-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
+.social-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; padding: 9px 20px; border-radius: 50px; color: white; text-decoration: none; font-size: 14px; font-weight: 600; transition: transform .2s, box-shadow .2s; }
+.social-btn:hover { transform: translateY(-3px); box-shadow: 0 8px 18px rgb(0 0 0 / 15%); }
+.social-fb { background: #1665cf; }
+.social-gh { background: #24292e; }
+.social-ig { background: linear-gradient(45deg, #ae4b00, #b71e63, #702b9c); }
+.intro { margin: 28px 0; padding-top: 24px; border-top: 1px solid var(--line); }
+h2 { font-size: 17px; color: #0f172a; }
+.intro p { margin-top: 8px; color: var(--muted); font-size: 14px; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 4px 12px; margin-bottom: 14px; }
+.section-heading > span { font-size: 12px; color: var(--muted); }
+.exercise-list { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0; list-style: none; }
+.btn-exercise { display: flex; align-items: center; min-width: 0; min-height: 76px; padding: 14px 16px; background: #f8fafc; border: 1px solid var(--line); border-radius: 14px; text-decoration: none; color: var(--ink); transition: background .2s, border-color .2s, box-shadow .2s, transform .2s; }
+.btn-exercise:hover { background: white; border-color: #3b82f6; box-shadow: 0 6px 18px rgb(59 130 246 / 12%); transform: translateX(3px); }
+.exercise-icon-box { flex: 0 0 44px; display: grid; place-items: center; width: 44px; height: 44px; margin-right: 14px; border-radius: 10px; background: #eff6ff; color: var(--blue); font-size: 18px; font-weight: 750; transition: background .2s, color .2s; }
+.btn-exercise:hover .exercise-icon-box { background: var(--blue); color: white; }
+.exercise-number { font-size: 14px; }
+.exercise-text { flex: 1; min-width: 0; }
+.exercise-title { display: block; font-size: 15px; font-weight: 700; line-height: 1.5; color: #0f172a; }
+.exercise-sub { display: block; margin-top: 3px; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+.exercise-arrow { flex: 0 0 20px; margin-left: 8px; color: #64748b; }
+.learning { margin-top: 28px; padding-top: 24px; border-top: 1px solid var(--line); }
+.learning-list { margin: 0; display: grid; gap: 16px; }
+.learning-list dt { font-size: 14px; font-weight: 700; }
+.learning-list dd { font-size: 14px; color: var(--muted); }
+footer { margin-top: 28px; padding-top: 20px; border-top: 1px solid var(--line); text-align: center; color: var(--muted); font-size: 12px; }
+footer > a { display: inline-flex; align-items: center; min-height: 44px; font-size: 14px; }
+.breadcrumb { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-bottom: 20px; font-size: 13px; }
+.breadcrumb a { display: inline-flex; align-items: center; min-height: 44px; }
+.lab-header { text-align: center; margin-bottom: 24px; }
+.lab-header h1 { font-size: 25px; line-height: 1.35; margin-bottom: 12px; color: #0f172a; }
+.lab-header .profile-tag { margin-top: 0; }
+.document-link { display: inline-flex; align-items: center; min-height: 44px; margin-top: 8px; font-size: 14px; }
+.lab-note { padding: 12px 14px; margin-bottom: 22px; border-radius: 10px; background: #eff6ff; color: #334e78; font-size: 13px; }
+.exercise-row { display: flex; align-items: stretch; gap: 8px; }
+.exercise-row .btn-exercise { flex: 1; }
+.evidence-link { display: flex; align-items: center; justify-content: center; flex: 0 0 104px; padding: 10px; border-radius: 12px; border: 1px solid var(--line); font-size: 12px; text-align: center; }
+.evidence-link:hover { background: #eff6ff; }
+.supplement-link { margin-top: 20px; font-size: 13px; }
+@media (max-width: 520px) {
+    body { padding: 20px 12px; }
+    .card-container { padding: 28px 18px; border-radius: 20px; }
+    .profile-name { font-size: 25px; }
+    .student-meta { grid-template-columns: 1fr; gap: 8px; }
+    .social-links { gap: 8px; }
+    .social-btn { padding: 9px 14px; }
+    .btn-exercise { padding: 13px 11px; }
+    .exercise-icon-box { margin-right: 10px; flex-basis: 40px; width: 40px; height: 40px; }
+    .exercise-title { font-size: 14px; }
+    .exercise-row { flex-direction: column; gap: 0; }
+    .exercise-row .btn-exercise { border-radius: 12px 12px 0 0; }
+    .exercise-row:not(:has(.evidence-link)) .btn-exercise { border-radius: 12px; }
+    .evidence-link { flex-basis: auto; min-height: 44px; border-top: 0; border-radius: 0 0 12px 12px; }
+    .lab-header h1 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { transition: none !important; }
+}
