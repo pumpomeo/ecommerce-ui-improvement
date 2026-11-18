@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tạo responsive</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,
+
+initial-scale=1.0">
+    <script type="text/javascript" src="https://gc.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=7KdLeo9a5LcnUdgRioCe4p4G68SAI8FY7D3HdVlO3603jJOgu8Rg0bN8j2gnlql7QQpxCElMZUS4tsw2cOQAA4ap7WaWAgGpz5bb_4HZeHhnB3qsUns4s4Z0oZ3p0lbmhMtzbEWVKhGewHF_qRcfTx4cppRtO4RGNYFUrN-WLhd4kLXELAOH4vOLqq3aBSmEG1I1xmdBq_DbbGC_Huh50T3fg9Xq-2GZGnJCP-soxrSIXYKq2OR3XNG6Go5BgQ7RATgVuZL3d4qbVBxKuAJsF3lyXKDR6--A0LukHSjqfV_LNqYbXBjR6K2Wi6_be17olZUoeQHeUOdzKwxgZTeQYSCNKISPTfC16uWYKaVoe99hnnYg-vvjuc49hLT06RzMLT8RMIsdeFy9oAFMvsVQ4uZUXbCGkC9_HJuDuDAK6goIrLoAhXQpJ1nSf6DNfqPMo4FJpQsSvqWnZO38jils5LpM5mDFYLJmSolysUINtt54rDvjJ-zFEED1yZxoupKAYQrB3wuWBzZMUpCpasYIFur4OxQZF1Dj_RVeG66z-1Smwqloru7Qr-xaT5zhNFqpBzS0bZAG0nPd_MfGyYiJyKcUIjyMGJig4pn_pRe2N_-hpd30oaIFJB5VbMazpn2pdEohxX1WfJFd2VVYjD1N9ibAJtT4DYsxw08oTqj6OHYO3VFidu43IsLDdRVSTokwUXhcA04JTB5cjQY5NcEOY1DLpYscqfRRkWNN20rFFPV4pHfDRAf37RxBB38lsDS-Uvx1EougtgsxQpbPSpdCD64foBvBuYGs-Kxnp1arepcEP9A08e8gpiPBwixoN5yGOIuxtIvyA_6pAkbvOoDjd3O7596b8ub0OxXibBqpB3PnLI6Y0gyVNCztfiqKWxnela7II-tjmoGYvavegfWQZD7ljC0fXMe06dz-oxkqxylJynSo4B7MAX675S99jSiLVLlAV6RGF3bcymtXFE93HEN3GKg2JnW9VqOOmXEcsookN8k9LQ0hO_0jugLCLHAtY7V9bNwt2hwuHjV4Yq89MoIiKiGM922I-jUQ3OJk3STvmMSIalixl8ytvYEfjk8aKc57K1Ue7Qpz9yIQwdA5a4dPzeaIYjpKhXZ5zwh87fBl1sksN9ujlttysfxkwBPG_XiP74EKfcpqcSZb3msf13jn5JHPVzhCxLD2Hqt6ObL99Jn9gdwrSVSDK6uHnwSMQ8KGJGSzxOOn0ZSezxNx2gfZPulirhed8uijPvgid2QMXXcS5yjKf0QsCCYaJEZ6zm064kMXkb2EgxHDbJ8HxV7M7I7Xbo8jW4hEDZl8mkxWfzLQuSkaOSd3-gcKmz2VlxDTaM61PiWopHgE653_qjzm6x-gxc2P3RIuS_MO9Yzzfuq7kXLjfsWIKFdUoVwY4VvvimAymGOSBiCFjqdNtT7nEqMhiK6LKTmMAwvkiuyGpsxOrI8bktuyNKurcAykf_V56Iu3U0L4zWYt6qpq_PrrICnz7068WM_f8IbQLP035wS-Y7XFUDW9lTvgs_r60cDlyCQquJ98-d6xuMl3aLZ1cMdgM3RzAWISbaa4saYnr0asUSRHCxjGGmQtFKCQY9AGkjf5MDk9Gk6YvShdh-PD7I2geUlckeUI4RIGtZdNy6K36FdN8RkwTC3h3qEQqyGnAsPtXlAPCpsxnvk0lEJDfJZ2uVY0TSMD8Y6UT4ZZI9NTHsuILK4pmC07_Wvu" nonce="bc33c38c4696b6fc25479818aab94cf0" charset="UTF-8"></script><style>
+      .left,
+      .right {
+        height: 400px;
+      }
+
+      .left {
+        background: blue;
+        float: left;
+        width: 70%;
+      }
+
+      .right {
+        background: red;
+        float: right;
+        width: 30%;
+      }
+
+      @media only screen and (max-width: 768px) {
+
+        .left,
+        .right {
+          width: 100%
+        }
+      }
+
+      @media only screen and (max-width: 479px) and (min-width: 321px) {
+        .right {
+          display: none
+        }
+      }
+
+      @media only print {
+        .left {
+          display: none
+        }
+
+        .right {
+          width: 100%
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left"> LEFT 
+    <picture>
+      <source width= "400" media="(min-width:800px)" srcset="https://www.ueh.edu.vn/images/logo-header.png">
+      <source width= "400"media="(min-width:600px)" srcset="https://ctd.ueh.edu.vn/wp-content/uploads/2023/07/cropped-TV_trang_CTD.png">
+      <img alt="..." src="https://ueh.edu.vn/schools/college/images/logo/bit-header-logo.png">
+    </picture>
+    </div>
+      <div class="right"> RIGHT </div>
+    </div>
+  </body>
+</html>

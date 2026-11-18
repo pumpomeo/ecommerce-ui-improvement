@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Buổi 5 | Thiết kế responsive</title>
+    <style>
+        body {
+            margin: 0;
+            background: #faf5ec;
+            color: #282020;
+            font: 1rem/1.6 system-ui, sans-serif;
+        }
+
+        main {
+            max-width: 640px;
+            margin: 0 auto;
+            padding: 48px 24px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(1.75rem, 5vw, 2.5rem);
+            line-height: 1.2;
+        }
+
+        a {
+            display: inline-block;
+            padding: 8px 16px;
+            border-radius: 6px;
+            background: #7a3416;
+            color: #fff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        a:hover { background: #59250f; }
+        a:focus-visible { outline: 2px solid #59250f; outline-offset: 3px; }
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Buổi 5 – Thiết kế responsive</h1>
+        <h2>Hôm nay mình đã học gì?</h2>
+        <ul>
+            <li>Chia trang thành hai cột theo tỷ lệ 70% và 30% bằng CSS.</li>
+            <li>Dùng media query để xếp hai cột theo chiều dọc khi màn hình rộng tối đa 768 px, và ẩn cột phải ở khoảng 321–479 px.</li>
+            <li>Dùng <code>@media print</code> để ẩn cột trái và cho cột phải chiếm hết chiều rộng khi in.</li>
+            <li>Dùng <code>&lt;picture&gt;</code> và <code>&lt;source&gt;</code> để đổi logo theo độ rộng màn hình, với <code>&lt;img&gt;</code> làm ảnh mặc định.</li>
+        </ul>
+        <a href="./Bai1.html">Mở Bài 1</a>
+    </main>
+</body>
+</html>
