@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Bộ dao nhà bếp 5 món — Sơ đồ minh họa</title><desc id="desc">Sơ đồ minh họa bộ năm dụng cụ gồm ba dao, một nĩa giữ thực phẩm và một thanh mài, phù hợp nội dung hình chụp.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#145f59"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183e39}.eyebrow{font-size:24px;fill:#176b62}.title{font-size:42px;font-weight:700}.label{font-size:28px;font-weight:700}.note{font-size:21px;fill:#40564e}.small{font-size:19px;fill:#40564e}.outline{stroke:#176b62;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}.detail{stroke:#4a7c74;stroke-width:4;fill:none;stroke-linecap:round}.measure{stroke:#145f59;stroke-width:3;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#9aafa9;stroke-width:2;stroke-dasharray:8 7}.accent{fill:#ea884b}.light{fill:#edf6f2}</style>
+<rect width="1000" height="1000" fill="#fff"/>
+<text x="70" y="70" class="eyebrow">MÈO HOME · Sơ đồ minh họa</text>
+<path d="M70 180 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="140" class="title">Bộ dao nhà bếp 5 món</text>
+
+<path d="M244 269 H607 V333 H350 Q268 328 244 269 Z" fill="#e0ebe6" class="outline"/>
+<rect x="607" y="274" width="160" height="49" rx="15" fill="#ea884b" class="outline"/>
+<path d="M282 375 H607 V417 H353 Q301 413 282 375 Z" fill="#e0ebe6" class="outline"/>
+<rect x="607" y="373" width="160" height="47" rx="15" fill="#ea884b" class="outline"/>
+<path d="M365 471 H607 V506 H417 Q381 504 365 471 Z" fill="#e0ebe6" class="outline"/>
+<rect x="607" y="469" width="160" height="44" rx="15" fill="#ea884b" class="outline"/>
+<path d="M300 568 H445 L478 582 H607 M300 598 H445 L478 582" class="detail"/>
+<rect x="607" y="559" width="160" height="46" rx="15" fill="#ea884b" class="outline"/>
+<path d="M302 682 H585" stroke="#8da79e" stroke-width="16" stroke-linecap="round"/>
+<path d="M585 658 V706" class="outline"/>
+<rect x="601" y="659" width="166" height="47" rx="15" fill="#ea884b" class="outline"/>
+<g class="note" text-anchor="middle"><text x="210" y="310">1</text><text x="210" y="407">2</text><text x="210" y="500">3</text><text x="210" y="592">4</text><text x="210" y="692">5</text></g>
+<text x="500" y="785" text-anchor="middle" class="label">3 dao + 1 nĩa + 1 thanh mài</text>
+<text x="500" y="830" text-anchor="middle" class="note">Tổng cộng 5 món</text>
+
+<path d="M70 885 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="925" class="note">Thông số minh họa dùng trong bài thực hành.</text>
+<text x="70" y="957" class="small">Hình vẽ dạng sơ đồ, không phải ảnh chụp sản phẩm.</text>
+</svg>

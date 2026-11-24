@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Nồi gang 24 cm · 3,5 L — Sơ đồ minh họa</title><desc id="desc">Sơ đồ nồi có nắp và hai quai, minh họa đường kính 24 cm và dung tích 3,5 lít.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#145f59"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183e39}.eyebrow{font-size:24px;fill:#176b62}.title{font-size:42px;font-weight:700}.label{font-size:28px;font-weight:700}.note{font-size:21px;fill:#40564e}.small{font-size:19px;fill:#40564e}.outline{stroke:#176b62;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}.detail{stroke:#4a7c74;stroke-width:4;fill:none;stroke-linecap:round}.measure{stroke:#145f59;stroke-width:3;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#9aafa9;stroke-width:2;stroke-dasharray:8 7}.accent{fill:#ea884b}.light{fill:#edf6f2}</style>
+<rect width="1000" height="1000" fill="#fff"/>
+<text x="70" y="70" class="eyebrow">MÈO HOME · Sơ đồ minh họa</text>
+<path d="M70 180 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="140" class="title">Nồi gang 24 cm · 3,5 L</text>
+
+<path d="M280 444 H213 Q171 444 171 480 Q171 520 225 520 H278 M722 444 H787 Q829 444 829 480 Q829 520 775 520 H724" fill="none" class="outline"/>
+<path d="M264 402 H736 L701 631 Q695 672 652 672 H348 Q305 672 299 631 Z" fill="#f4b080" class="outline"/>
+<ellipse cx="500" cy="404" rx="238" ry="55" fill="#f3d5be" class="outline"/>
+<path d="M290 393 Q500 301 710 393" fill="#ea884b" class="outline"/>
+<rect x="462" y="318" width="76" height="36" rx="12" fill="#176b62"/>
+<path d="M334 490 V594 Q334 624 360 624" stroke="#fff1e6" stroke-width="13" fill="none" stroke-linecap="round"/>
+<text x="500" y="550" text-anchor="middle" class="label">3,5 L</text>
+<text x="500" y="590" text-anchor="middle" class="note">Dung tích</text>
+<line x1="264" y1="425" x2="264" y2="765" class="guide"/>
+<line x1="736" y1="425" x2="736" y2="765" class="guide"/>
+<line x1="275" y1="752" x2="725" y2="752" class="measure"/>
+<rect x="415" y="729" width="170" height="48" fill="white"/>
+<text x="500" y="764" text-anchor="middle" class="label">24 cm</text>
+<text x="500" y="820" text-anchor="middle" class="note">Đường kính nồi</text>
+
+<path d="M70 885 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="925" class="note">Thông số minh họa dùng trong bài thực hành.</text>
+<text x="70" y="957" class="small">Hình vẽ dạng sơ đồ, không phải ảnh chụp sản phẩm.</text>
+</svg>

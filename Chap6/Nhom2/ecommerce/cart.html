@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Giỏ hàng — MÈO HOME</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../assets/base.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header id="site-header"></header>
+    <main class="container" id="main">
+      <div class="page-title">
+        <p class="eyebrow">MÈO HOME</p>
+        <h1>Giỏ hàng của bạn</h1>
+      </div>
+      <div class="empty-state" id="cart-empty">
+        <h2>Giỏ hàng đang trống</h2>
+        <p class="muted">Chọn một món đồ hữu ích cho căn bếp của bạn.</p>
+        <a class="button" href="index.html">Khám phá sản phẩm</a>
+      </div>
+      <div class="cart-layout" id="cart-layout" hidden>
+        <section id="cart-items" aria-label="Sản phẩm trong giỏ"></section>
+        <aside class="cart-summary">
+          <h2>Tóm tắt giỏ hàng</h2>
+          <p>Tạm tính</p>
+          <p class="cart-total" id="cart-total"></p>
+          <button type="button" class="button" id="place-demo-order">
+            Xác nhận đơn demo
+          </button>
+          <p class="form-note">
+            Đây là thao tác minh họa. Không có thanh toán hay đặt hàng thật.
+          </p>
+          <a href="index.html">Tiếp tục mua sắm</a>
+        </aside>
+      </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="products.js"></script>
+    <script src="model.js"></script>
+    <script src="shared.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>

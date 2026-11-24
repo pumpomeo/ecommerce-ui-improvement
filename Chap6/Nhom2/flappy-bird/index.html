@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Flappy Mèo — Chuyến bay qua thành phố</title>
+    <link rel="stylesheet" href="../assets/base.css" />
+    <link rel="stylesheet" href="game.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  </head>
+  <body>
+    <header class="game-header">
+      <a href="../index.html">MÈO / ARCADE</a><span>Bài 3 · Flappy Bird</span>
+    </header>
+    <main class="game-layout">
+      <section class="game-column" aria-labelledby="game-title">
+        <div class="game-title">
+          <h1 id="game-title">Flappy Mèo</h1>
+          <p>Một chuyến bay nhỏ qua những mái nhà.</p>
+        </div>
+        <div
+          class="game-board"
+          id="game-board"
+          data-status="ready"
+          data-level="1"
+          data-interval="40"
+        >
+          <canvas
+            id="game"
+            width="480"
+            height="640"
+            tabindex="0"
+            aria-label="Sân chơi Flappy Mèo, điều khiển bằng phím mũi tên xuống"
+            aria-describedby="controls-help"
+            >Trình duyệt cần hỗ trợ Canvas để hiển thị game.</canvas
+          >
+          <div class="hud">
+            <div class="level-badge">LEVEL <strong id="level">1</strong></div>
+            <div class="score-badge">
+              <strong id="score">0</strong><span> / 50</span>
+            </div>
+          </div>
+          <div class="game-overlay" id="game-overlay">
+            <div class="overlay-card">
+              <img
+                src="bird.svg"
+                alt="Chim Mèo màu cam với đôi cánh teal"
+                width="120"
+                height="90"
+              />
+              <h2 id="overlay-title">Sẵn sàng cất cánh?</h2>
+              <p id="overlay-description">
+                Vượt qua các ống gốm, ghi 50 điểm và chinh phục 4 level.
+              </p>
+              <button type="button" id="start-button" class="button">
+                Bắt đầu
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="game-controls">
+          <button class="button flap-button" id="flap-button" type="button">
+            ↓ Bay lên</button
+          ><button
+            class="button secondary"
+            id="pause-button"
+            type="button"
+            disabled
+          >
+            Tạm dừng · P</button
+          ><button class="button secondary" id="restart-button" type="button">
+            Chơi lại · R
+          </button>
+        </div>
+        <p
+          class="sr-only"
+          id="game-announcement"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </section>
+      <aside class="flight-guide">
+        <p class="eyebrow">Chuyến bay của bạn</p>
+        <div class="best-score">
+          <span>Kỷ lục trên máy này</span><strong id="best-score">0</strong>
+        </div>
+        <h2>Nhấn ↓ để bay lên.</h2>
+        <p id="controls-help">
+          Chim tự rơi. Nhấn từng nhịp phím <kbd>↓</kbd> để nâng chim, tránh ống
+          và mặt đất. Qua một cặp ống được 1 điểm.
+        </p>
+        <div class="level-list">
+          <h3>Bốn chặng đường</h3>
+          <ol>
+            <li><span>Level 1</span><strong>0–4 điểm</strong></li>
+            <li><span>Level 2</span><strong>5–19 điểm</strong></li>
+            <li><span>Level 3</span><strong>20–39 điểm</strong></li>
+            <li><span>Level 4</span><strong>40–49 điểm</strong></li>
+          </ol>
+          <p>Đạt <strong>50 điểm</strong>: dừng game và chiến thắng.</p>
+        </div>
+        <label class="practice-option"
+          ><input type="checkbox" id="practice" /> Chế độ luyện tập — khe ống
+          rộng hơn</label
+        >
+        <p class="guide-note">
+          Phím <kbd>P</kbd> để tạm dừng, <kbd>R</kbd> để chơi lại. Game tự tạm
+          dừng khi bạn chuyển cửa sổ. Trên điện thoại, dùng nút “Bay lên”.
+        </p>
+        <a href="../jquery-lms/index.html">Xem bài jQuery LMS</a>
+      </aside>
+    </main>
+    <footer class="game-footer">
+      Chim Mèo và ống gốm là hình SVG tự thiết kế · requestAnimationFrame giữ
+      chuyển động mượt.
+    </footer>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="engine.js"></script>
+    <script src="game.js"></script>
+  </body>
+</html>

@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>MÈO HOME — Đồ dùng nhà bếp</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../vendor/star-rating/css/star-rating.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../vendor/star-rating/themes/krajee-svg/theme.min.css"
+    />
+    <link rel="stylesheet" href="../assets/base.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header id="site-header"></header>
+    <main class="container" id="main">
+      <section
+        id="shop-carousel"
+        class="carousel slide shop-hero"
+        aria-label="Bộ sưu tập nổi bật"
+      >
+        <ol class="carousel-indicators">
+          <li
+            data-target="#shop-carousel"
+            data-slide-to="0"
+            class="active"
+          ></li>
+          <li data-target="#shop-carousel" data-slide-to="1"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="item active hero-slide">
+            <div>
+              <p class="eyebrow">MÈO HOME · Bộ sưu tập nhà bếp</p>
+              <h1>Một căn bếp gọn.<br />Nhiều bữa ăn vui.</h1>
+              <p>
+                Chọn những món đồ hữu ích, dễ dùng và vừa vặn với nhịp sống mỗi
+                ngày.
+              </p>
+              <a class="button" href="#catalog">Khám phá sản phẩm</a>
+            </div>
+            <img
+              src="../assets/products/kitchen-4.jpg"
+              alt="Nồi gang màu cam có nắp và hai tay cầm"
+              width="500"
+              height="500"
+            />
+          </div>
+          <div class="item hero-slide">
+            <div>
+              <p class="eyebrow">Thói quen nhỏ mỗi ngày</p>
+              <h2>Mang theo bình nước,<br />mang theo điều tốt.</h2>
+              <p>
+                Đồ dùng tái sử dụng gọn nhẹ, từ góc bếp đến những chuyến đi.
+              </p>
+              <a class="button" href="product.html?id=bottle">Xem bình nước</a>
+            </div>
+            <img
+              src="../assets/products/kitchen-3.jpg"
+              alt="Bình nước màu xanh"
+              width="500"
+              height="500"
+            />
+          </div>
+        </div>
+        <a
+          class="left carousel-control"
+          href="#shop-carousel"
+          role="button"
+          data-slide="prev"
+          ><span aria-hidden="true">‹</span
+          ><span class="sr-only">Bộ sưu tập trước</span></a
+        ><a
+          class="right carousel-control"
+          href="#shop-carousel"
+          role="button"
+          data-slide="next"
+          ><span aria-hidden="true">›</span
+          ><span class="sr-only">Bộ sưu tập sau</span></a
+        >
+      </section>
+      <div class="catalog" id="catalog">
+        <aside class="categories">
+          <h2>Danh mục</h2>
+          <div class="category-list">
+            <button type="button" class="active" aria-pressed="true">
+              Tất cả</button
+            ><button type="button" aria-pressed="false">Nồi &amp; chảo</button
+            ><button type="button" aria-pressed="false">Dụng cụ bếp</button
+            ><button type="button" aria-pressed="false">
+              Đồ dùng hằng ngày
+            </button>
+          </div>
+        </aside>
+        <section aria-labelledby="catalog-title">
+          <div class="catalog-toolbar">
+            <div>
+              <p class="eyebrow" id="result-count" aria-live="polite">
+                6 sản phẩm
+              </p>
+              <h2 id="catalog-title">Gọn gàng từ điều nhỏ</h2>
+            </div>
+            <div class="catalog-controls">
+              <label class="sr-only" for="search">Tìm sản phẩm</label
+              ><input
+                class="field"
+                id="search"
+                type="search"
+                placeholder="Tìm đồ dùng nhà bếp"
+              /><label class="sr-only" for="sort">Sắp xếp sản phẩm</label
+              ><select class="field" id="sort">
+                <option value="featured">Nổi bật</option>
+                <option value="price-asc">Giá tăng dần</option>
+                <option value="price-desc">Giá giảm dần</option>
+                <option value="rating">Đánh giá cao nhất</option>
+              </select>
+            </div>
+          </div>
+          <div class="products" id="products"></div>
+          <p id="empty-products" class="empty-state" hidden>
+            Không tìm thấy sản phẩm phù hợp. Hãy thử từ khóa hoặc danh mục khác.
+          </p>
+        </section>
+      </div>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/star-rating/js/star-rating.min.js"></script>
+    <script src="../vendor/star-rating/themes/krajee-svg/theme.min.js"></script>
+    <script src="products.js"></script>
+    <script src="model.js"></script>
+    <script src="shared.js"></script>
+    <script src="catalog.js"></script>
+  </body>
+</html>

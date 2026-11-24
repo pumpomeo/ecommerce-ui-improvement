@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-24",
+  "checks": [
+    "Danh mục, lọc tìm kiếm, sắp xếp, badge, rating thật và Bootstrap progress",
+    "xZoom đổi thumbnail/zoom, biến thể/số lượng, đánh giá an toàn",
+    "Giỏ hàng lưu/reload, sửa số lượng, tạo đơn demo và chuyển trạng thái",
+    "LMS lớp thật: 14 chủ đề, 16 bài, bài thứ5 và deadline đúng; không bịa 2 hạn bị thiếu",
+    "Không tràn ngang ở 320/768/1024/1440px cho toàn bộ 7 trang",
+    "Game chơi bằng phím ArrowDown: pause/resume/lost, 4 level, 50 điểm dừng và Victory ở chế độ luyện tập"
+  ],
+  "errors": []
+}

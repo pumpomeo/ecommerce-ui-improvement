@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Túi vải 38 × 42 cm — Sơ đồ minh họa</title><desc id="desc">Sơ đồ túi vải hai quai, với mũi tên ngang minh họa chiều rộng 38 cm và mũi tên dọc minh họa chiều cao thân túi 42 cm.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#145f59"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183e39}.eyebrow{font-size:24px;fill:#176b62}.title{font-size:42px;font-weight:700}.label{font-size:28px;font-weight:700}.note{font-size:21px;fill:#40564e}.small{font-size:19px;fill:#40564e}.outline{stroke:#176b62;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}.detail{stroke:#4a7c74;stroke-width:4;fill:none;stroke-linecap:round}.measure{stroke:#145f59;stroke-width:3;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#9aafa9;stroke-width:2;stroke-dasharray:8 7}.accent{fill:#ea884b}.light{fill:#edf6f2}</style>
+<rect width="1000" height="1000" fill="#fff"/>
+<text x="70" y="70" class="eyebrow">MÈO HOME · Sơ đồ minh họa</text>
+<path d="M70 180 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="140" class="title">Túi vải 38 × 42 cm</text>
+
+<path d="M377 350 V282 Q377 217 442 217 H558 Q623 217 623 282 V350" fill="none" stroke="#176b62" stroke-width="28"/>
+<rect x="290" y="350" width="420" height="420" rx="12" fill="#f7e7d7" class="outline"/>
+<path d="M315 375 H685 V745 H315 Z" stroke="#b89472" stroke-width="2" stroke-dasharray="7 7" fill="none"/>
+<path d="M377 350 V425 M623 350 V425" stroke="#176b62" stroke-width="28"/>
+<line x1="290" y1="785" x2="290" y2="835" class="guide"/>
+<line x1="710" y1="785" x2="710" y2="835" class="guide"/>
+<line x1="300" y1="825" x2="700" y2="825" class="measure"/>
+<rect x="420" y="802" width="160" height="46" fill="white"/>
+<text x="500" y="835" text-anchor="middle" class="label">38 cm</text>
+<line x1="730" y1="350" x2="830" y2="350" class="guide"/>
+<line x1="730" y1="770" x2="830" y2="770" class="guide"/>
+<line x1="815" y1="360" x2="815" y2="760" class="measure"/>
+<rect x="769" y="516" width="92" height="84" fill="white"/>
+<text x="815" y="551" text-anchor="middle" class="label">42</text><text x="815" y="586" text-anchor="middle" class="label">cm</text>
+
+<path d="M70 885 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="925" class="note">Thông số minh họa dùng trong bài thực hành.</text>
+<text x="70" y="957" class="small">Hình vẽ dạng sơ đồ, không phải ảnh chụp sản phẩm.</text>
+</svg>

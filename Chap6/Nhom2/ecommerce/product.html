@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Chi tiết sản phẩm — MÈO HOME</title>
+    <link rel="stylesheet" href="../vendor/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="../vendor/star-rating/css/star-rating.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="../vendor/star-rating/themes/krajee-svg/theme.min.css"
+    />
+    <link rel="stylesheet" href="../vendor/xzoom/xzoom.css" />
+    <link rel="stylesheet" href="../assets/base.css" />
+    <link rel="stylesheet" href="shop.css" />
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Đến nội dung</a>
+    <header id="site-header"></header>
+    <main class="container" id="main">
+      <nav class="page-title" aria-label="Đường dẫn">
+        <ol class="breadcrumb">
+          <li><a href="index.html">Sản phẩm</a></li>
+          <li class="active" id="product-crumb">Chi tiết</li>
+        </ol>
+      </nav>
+      <div id="detail-root"></div>
+      <section
+        class="review-section"
+        id="reviews"
+        aria-labelledby="reviews-title"
+      >
+        <p class="eyebrow">Góc chia sẻ</p>
+        <h2 id="reviews-title">Đánh giá sản phẩm</h2>
+        <p class="muted">
+          Nhận xét trong bài thực hành chỉ hiển thị ở phiên hiện tại.
+        </p>
+        <form class="review-form" id="review-form">
+          <div>
+            <label for="review-rating">Số sao</label
+            ><input
+              type="text"
+              id="review-rating"
+              value="5"
+              aria-label="Chọn số sao từ 1 đến 5"
+            />
+          </div>
+          <div>
+            <label for="review-name">Tên hiển thị (không bắt buộc)</label
+            ><input
+              class="field"
+              id="review-name"
+              maxlength="40"
+              autocomplete="off"
+              placeholder="Khách ghé thăm"
+            />
+          </div>
+          <div>
+            <label for="review-text">Nhận xét</label
+            ><textarea
+              class="field"
+              id="review-text"
+              rows="3"
+              maxlength="500"
+              required
+              placeholder="Chia sẻ nhận xét của bạn"
+            ></textarea>
+          </div>
+          <div><button class="button" type="submit">Gửi nhận xét</button></div>
+        </form>
+        <div id="reviews-list" aria-live="polite"></div>
+      </section>
+    </main>
+    <footer id="site-footer"></footer>
+    <script src="../vendor/jquery/jquery.min.js"></script>
+    <script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../vendor/xzoom/xzoom.min.js"></script>
+    <script src="../vendor/star-rating/js/star-rating.min.js"></script>
+    <script src="../vendor/star-rating/themes/krajee-svg/theme.min.js"></script>
+    <script src="products.js"></script>
+    <script src="model.js"></script>
+    <script src="shared.js"></script>
+    <script src="product.js"></script>
+  </body>
+</html>

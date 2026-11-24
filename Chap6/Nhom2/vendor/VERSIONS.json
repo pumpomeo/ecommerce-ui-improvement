@@ -1,0 +1,153 @@
+[
+  {
+    "name": "jquery",
+    "version": "3.7.1",
+    "registry": "https://registry.npmjs.org/jquery/3.7.1",
+    "tarball": "https://registry.npmjs.org/jquery/-/jquery-3.7.1.tgz",
+    "integrity": "sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==",
+    "files": [
+      {
+        "path": "vendor/jquery/jquery.min.js",
+        "bytes": 87533,
+        "sha256": "fc9a93dd241f6b045cbff0481cf4e1901becd0e12fb45166a8f17f95823f0b1a"
+      },
+      {
+        "path": "vendor/jquery/jquery.min.map",
+        "bytes": 134755,
+        "sha256": "cf74d51c62d299189989130ebb423b30453532fdc8988d8e2b71b1b9165a80b8"
+      },
+      {
+        "path": "vendor/jquery/LICENSE.txt",
+        "bytes": 1097,
+        "sha256": "d4db9ebe6f29f5168eac45ad713f055623ac5d0dcd5ba92da23d650ae012020d"
+      }
+    ]
+  },
+  {
+    "name": "bootstrap",
+    "version": "3.4.1",
+    "registry": "https://registry.npmjs.org/bootstrap/3.4.1",
+    "tarball": "https://registry.npmjs.org/bootstrap/-/bootstrap-3.4.1.tgz",
+    "integrity": "sha512-yN5oZVmRCwe5aKwzRj6736nSmKDX7pLYwsXiCj/EYmo16hODaBiT4En5btW/jhBF/seV+XMx3aYwukYC3A49DA==",
+    "files": [
+      {
+        "path": "vendor/bootstrap/css/bootstrap.min.css",
+        "bytes": 121457,
+        "sha256": "6d92dfc1700fd38cd130ad818e23bc8aef697f815b2ea5face2b5dfad22f2e11"
+      },
+      {
+        "path": "vendor/bootstrap/css/bootstrap.min.css.map",
+        "bytes": 540434,
+        "sha256": "78b58c9ebfd42ec2c61bc4fdf46a5df998e6cd907c773076a0a6e8f5686bafc3"
+      },
+      {
+        "path": "vendor/bootstrap/js/bootstrap.min.js",
+        "bytes": 39680,
+        "sha256": "9ee2fcff6709e4d0d24b09ca0fc56aade12b4961ed9c43fd13b03248bfb57afe"
+      },
+      {
+        "path": "vendor/bootstrap/LICENSE",
+        "bytes": 1106,
+        "sha256": "0f9f7ff25c98790a39d5c70b785e9fa0a8d276d45e78c7559502085ccaab8209"
+      },
+      {
+        "path": "vendor/bootstrap/fonts/glyphicons-halflings-regular.eot",
+        "bytes": 20127,
+        "sha256": "13634da87d9e23f8c3ed9108ce1724d183a39ad072e73e1b3d8cbf646d2d0407"
+      },
+      {
+        "path": "vendor/bootstrap/fonts/glyphicons-halflings-regular.svg",
+        "bytes": 108738,
+        "sha256": "42f60659d265c1a3c30f9fa42abcbb56bd4a53af4d83d316d6dd7a36903c43e5"
+      },
+      {
+        "path": "vendor/bootstrap/fonts/glyphicons-halflings-regular.ttf",
+        "bytes": 45404,
+        "sha256": "e395044093757d82afcb138957d06a1ea9361bdcf0b442d06a18a8051af57456"
+      },
+      {
+        "path": "vendor/bootstrap/fonts/glyphicons-halflings-regular.woff",
+        "bytes": 23424,
+        "sha256": "a26394f7ede100ca118eff2eda08596275a9839b959c226e15439557a5a80742"
+      },
+      {
+        "path": "vendor/bootstrap/fonts/glyphicons-halflings-regular.woff2",
+        "bytes": 18028,
+        "sha256": "fe185d11a49676890d47bb783312a0cda5a44c4039214094e7957b4c040ef11c"
+      }
+    ]
+  },
+  {
+    "name": "xzoom",
+    "version": "1.0.15",
+    "registry": "https://registry.npmjs.org/xzoom/1.0.15",
+    "tarball": "https://registry.npmjs.org/xzoom/-/xzoom-1.0.15.tgz",
+    "integrity": "sha512-g95AXPOmVy6mu3kTFMkHKLirdyaIJbUdNN47coMzthNusvlJswnQwYQNl3H5EgxTtBvFETn5byPqYEQs+gng/A==",
+    "files": [
+      {
+        "path": "vendor/xzoom/xzoom.min.js",
+        "bytes": 13179,
+        "sha256": "76ae5b1e31b7245aeeb80af92e89d5f7f0493b66f1589b355961130b58fd5089"
+      },
+      {
+        "path": "vendor/xzoom/xzoom.css",
+        "bytes": 2199,
+        "sha256": "416e0080de5c73eb282b0b66fc5f967d648abbd140a0c9ae76409bb7f4414530"
+      },
+      {
+        "path": "vendor/xzoom/xzoom.min.css",
+        "bytes": 1500,
+        "sha256": "d8a112c66015c3c2ee8dd7eefb65c9803d0b424d32ee1d3aa9685b99671af13a"
+      },
+      {
+        "path": "vendor/xzoom/LICENSE",
+        "bytes": 11362,
+        "sha256": "9bc536fc5ee1b66f16d2dafdbbf1bf38ac97d98eb88167100584aeaab837a169"
+      },
+      {
+        "path": "vendor/example/images/xloading.gif",
+        "bytes": 32672,
+        "sha256": "e658ab059e1cd864f1e9d8baa04c920bb54c8ab4c6b71f3436fa7d499c369613"
+      }
+    ]
+  },
+  {
+    "name": "bootstrap-star-rating",
+    "version": "4.1.2",
+    "registry": "https://registry.npmjs.org/bootstrap-star-rating/4.1.2",
+    "tarball": "https://registry.npmjs.org/bootstrap-star-rating/-/bootstrap-star-rating-4.1.2.tgz",
+    "integrity": "sha512-ddx3Akar9RhC2yKR1722KqdD7KMvn9AkqG+Nk+w/ECoSmZNHOxbq9aQ+s1V1VeiYhfKoL20FJYUYmAC1RXyssw==",
+    "files": [
+      {
+        "path": "vendor/star-rating/css/star-rating.min.css",
+        "bytes": 2922,
+        "sha256": "0d75eb8e234c16e3dc6a0c5e80de0d4b93ae7e9c1eb6dbed2f53319efdd4852f"
+      },
+      {
+        "path": "vendor/star-rating/js/star-rating.min.js",
+        "bytes": 14336,
+        "sha256": "ac4e30a3ae3c5cf6a61c3c1eddbc633e2c2c787081d2c52d5ea2a9618ab072b8"
+      },
+      {
+        "path": "vendor/star-rating/themes/krajee-svg/theme.min.css",
+        "bytes": 5468,
+        "sha256": "c4cdf9bd97806c3ceba7a1a880a06b3520c9102e16d05e196624a67bb63dfd74"
+      },
+      {
+        "path": "vendor/star-rating/themes/krajee-svg/theme.min.js",
+        "bytes": 836,
+        "sha256": "f5c74696c8101b2376d562cd06082919192f4b2ca566014cb6523819ccfd7282"
+      },
+      {
+        "path": "vendor/star-rating/LICENSE.md",
+        "bytes": 1556,
+        "sha256": "609ac486bc3deccc3744955b568db02fdaeeef71262ab68a85345ba17ad1a697"
+      },
+      {
+        "path": "vendor/star-rating/img/loading.gif",
+        "bytes": 847,
+        "sha256": "abb2c87444ef9f0ad7ff70d880ab21728e26380949753c630fa1831fe62b8026"
+      }
+    ]
+  }
+]

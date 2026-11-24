@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Máy xay sinh tố 1,5 L — Sơ đồ minh họa</title><desc id="desc">Sơ đồ máy xay gồm nắp, cối có tay cầm và đế máy. Dung tích cối 1,5 lít là thông số minh họa.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#145f59"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183e39}.eyebrow{font-size:24px;fill:#176b62}.title{font-size:42px;font-weight:700}.label{font-size:28px;font-weight:700}.note{font-size:21px;fill:#40564e}.small{font-size:19px;fill:#40564e}.outline{stroke:#176b62;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}.detail{stroke:#4a7c74;stroke-width:4;fill:none;stroke-linecap:round}.measure{stroke:#145f59;stroke-width:3;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#9aafa9;stroke-width:2;stroke-dasharray:8 7}.accent{fill:#ea884b}.light{fill:#edf6f2}</style>
+<rect width="1000" height="1000" fill="#fff"/>
+<text x="70" y="70" class="eyebrow">MÈO HOME · Sơ đồ minh họa</text>
+<path d="M70 180 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="140" class="title">Máy xay sinh tố 1,5 L</text>
+
+<path d="M642 312 H695 Q770 312 770 385 V490 Q770 558 692 558 H656" fill="none" class="outline"/>
+<path d="M350 270 H650 L615 655 H385 Z" fill="#edf6f2" class="outline"/>
+<path d="M381 430 H624 L605 637 H396 Z" fill="#b7dcd0"/>
+<rect x="337" y="232" width="326" height="47" rx="15" fill="#176b62"/>
+<rect x="458" y="215" width="84" height="20" rx="8" fill="#ea884b"/>
+<path d="M395 330 H438 M400 390 H430 M405 450 H438 M410 510 H430 M415 570 H438" class="detail"/>
+<path d="M475 590 L520 625 M520 590 L475 625" class="detail"/>
+<rect x="352" y="668" width="296" height="150" rx="34" fill="#e1e9e5" class="outline"/>
+<circle cx="500" cy="742" r="32" fill="#ea884b" stroke="#176b62" stroke-width="4"/>
+<path d="M500 742 L514 720" class="detail"/>
+<text x="785" y="662" text-anchor="middle" class="label">1,5 L</text>
+<text x="785" y="700" text-anchor="middle" class="note">Dung tích cối</text>
+<path d="M686 632 L634 590" class="detail"/>
+
+<path d="M70 885 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="925" class="note">Thông số minh họa dùng trong bài thực hành.</text>
+<text x="70" y="957" class="small">Hình vẽ dạng sơ đồ, không phải ảnh chụp sản phẩm.</text>
+</svg>

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Nhóm 2 — Advanced Frontend</title>
+    <link rel="stylesheet" href="assets/base.css" />
+    <style>
+      .exercises {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+      }
+      .exercise {
+        border-top: 3px solid var(--green);
+        padding: 24px 0;
+      }
+      .exercise h2 {
+        font-size: 1.4rem;
+      }
+      .exercise p {
+        color: var(--muted);
+        min-height: 104px;
+      }
+      @media (max-width: 760px) {
+        .exercises {
+          grid-template-columns: 1fr;
+        }
+        .exercise p {
+          min-height: 0;
+        }
+      }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  </head>
+  <body>
+    <header class="lab-nav">
+      <div class="wrap">
+        <a class="lab-brand" href="index.html">MÈO / FRONTEND LAB</a
+        ><span class="muted">Chương 6 · Nhóm 2</span>
+      </div>
+    </header>
+    <main class="wrap">
+      <div class="page-head">
+        <p class="eyebrow">Phát triển ứng dụng TMĐT</p>
+        <h1>Ba bài thực hành.<br />Ba cách làm frontend.</h1>
+        <p>
+          Website bán hàng responsive, công cụ đọc bài tập LMS và game Flappy
+          Bird cá nhân hóa bằng JavaScript và jQuery.
+        </p>
+      </div>
+      <div class="exercises">
+        <section class="exercise">
+          <p class="eyebrow">Bài 1</p>
+          <h2>MÈO HOME</h2>
+          <p>
+            Cửa hàng đồ dùng nhà bếp: xem và zoom ảnh, đánh giá sao, tồn kho,
+            giỏ hàng và đơn hàng demo.
+          </p>
+          <a class="button" href="ecommerce/index.html">Mở cửa hàng</a>
+        </section>
+        <section class="exercise">
+          <p class="eyebrow">Bài 2</p>
+          <h2>Bài tập LMS</h2>
+          <p>
+            In bài nộp thứ năm, thống kê từng chủ đề và deadline. Có script dùng
+            trên LMS và trang kiểm chứng.
+          </p>
+          <a class="button" href="jquery-lms/index.html">Xem thống kê</a>
+        </section>
+        <section class="exercise">
+          <p class="eyebrow">Bài 3</p>
+          <h2>Flappy Mèo</h2>
+          <p>
+            Điều khiển bằng phím mũi tên xuống, qua 4 level tốc độ và đạt 50
+            điểm để chiến thắng.
+          </p>
+          <a class="button" href="flappy-bird/index.html">Chơi game</a>
+        </section>
+      </div>
+    </main>
+    <footer class="lab-footer">
+      <div class="wrap">
+        Bài thực hành Advanced Frontend · HTML, CSS, JavaScript, jQuery và
+        Bootstrap 3.
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,8 @@
+{
+  "name": "chap6-nhom2-advanced-frontend",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "start": "python3 -m http.server 8086 --bind 127.0.0.1"
+  }
+}

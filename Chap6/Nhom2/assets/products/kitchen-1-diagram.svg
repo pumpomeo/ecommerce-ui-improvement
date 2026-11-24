@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="1000" viewBox="0 0 1000 1000" role="img" aria-labelledby="title desc">
+<title id="title">Chảo đường kính 26 cm — Sơ đồ minh họa</title><desc id="desc">Sơ đồ chảo nhìn từ trên, có tay cầm. Mũi tên chỉ đường kính lòng chảo 26 cm, thông số minh họa.</desc>
+<defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="5" refY="5" orient="auto-start-reverse"><path d="M1 1 L9 5 L1 9 Z" fill="#145f59"/></marker></defs>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#183e39}.eyebrow{font-size:24px;fill:#176b62}.title{font-size:42px;font-weight:700}.label{font-size:28px;font-weight:700}.note{font-size:21px;fill:#40564e}.small{font-size:19px;fill:#40564e}.outline{stroke:#176b62;stroke-width:7;stroke-linejoin:round;stroke-linecap:round}.detail{stroke:#4a7c74;stroke-width:4;fill:none;stroke-linecap:round}.measure{stroke:#145f59;stroke-width:3;marker-start:url(#arrow);marker-end:url(#arrow)}.guide{stroke:#9aafa9;stroke-width:2;stroke-dasharray:8 7}.accent{fill:#ea884b}.light{fill:#edf6f2}</style>
+<rect width="1000" height="1000" fill="#fff"/>
+<text x="70" y="70" class="eyebrow">MÈO HOME · Sơ đồ minh họa</text>
+<path d="M70 180 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="140" class="title">Chảo đường kính 26 cm</text>
+
+<rect x="690" y="450" width="230" height="64" rx="24" fill="#ea884b" class="outline"/>
+<circle cx="460" cy="480" r="235" fill="#dbece4" class="outline"/>
+<circle cx="460" cy="480" r="199" fill="#f6faf8" stroke="#709c90" stroke-width="4"/>
+<path d="M315 385 Q345 320 415 306" class="detail"/>
+<line x1="225" y1="500" x2="225" y2="790" class="guide"/>
+<line x1="695" y1="500" x2="695" y2="790" class="guide"/>
+<line x1="235" y1="780" x2="685" y2="780" class="measure"/>
+<rect x="350" y="756" width="220" height="48" fill="white"/>
+<text x="460" y="790" text-anchor="middle" class="label">26 cm</text>
+<text x="460" y="838" text-anchor="middle" class="note">Đường kính chảo</text>
+
+<path d="M70 885 H930" stroke="#d9e6df" stroke-width="2"/>
+<text x="70" y="925" class="note">Thông số minh họa dùng trong bài thực hành.</text>
+<text x="70" y="957" class="small">Hình vẽ dạng sơ đồ, không phải ảnh chụp sản phẩm.</text>
+</svg>
